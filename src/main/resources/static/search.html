@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Movie</title>
+</head>
+<body>
+
+<h2>Search Movie</h2>
+
+<input type="text" id="searchInput" placeholder="Movie name">
+<button id="searchBtn" onclick="search()">Search</button>
+
+<div id="result"></div>
+
+<script>
+    function search() {
+        const q = document.getElementById("searchInput").value;
+
+        fetch("/movies/search?q=" + q)
+            .then(res => res.json())
+            .then(data => {
+                let html = "";
+                data.forEach(m => {
+                    html += "<p>" + m.name + "</p>";
+                });
+                document.getElementById("result").innerHTML = html;
+            });
+    }
+</script>
+
+</body>
+</html>

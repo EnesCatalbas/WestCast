@@ -1,0 +1,6 @@
+main\controller\UserControllerIntegrationTest.class
+main\selenium\SearchApiTest.class
+main\service\UserServiceTest.class
+main\selenium\LoginApiTest.class
+main\selenium\BaseTest.class
+main\selenium\SignUpApiTest.class
