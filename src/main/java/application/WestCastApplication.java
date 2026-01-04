@@ -16,4 +16,6 @@ public class WestCastApplication {
     public static void main(String[] args) {
         SpringApplication.run(WestCastApplication.class, args);
     }
+
+    // degisiklik deneme
 }
