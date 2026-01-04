@@ -18,7 +18,7 @@ import static org.hamcrest.Matchers.*;
 
 @SpringBootTest(classes = WestCastApplication.class)
 @AutoConfigureMockMvc
-public class UserControllerIntegrationTest {
+public class UserControllerIT {
 
     @Autowired
     private MockMvc mockMvc;
