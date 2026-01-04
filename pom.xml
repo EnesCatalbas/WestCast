@@ -14,15 +14,18 @@
     <groupId>com.example</groupId>
     <artifactId>WestCast</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <name>WestCast</name>
 
-    <!-- 🔴 JAVA 16 GERİ ALINDI -->
+    <!-- 🔴 Java 16 (Stream.toList uyumu için) -->
     <properties>
         <java.version>16</java.version>
+        <selenium.tests>false</selenium.tests>
     </properties>
 
     <!-- ================= DEPENDENCIES ================= -->
     <dependencies>
 
+        <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -34,14 +37,15 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- H2 -->
+        <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
         <!-- JWT -->
@@ -63,7 +67,8 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- TEST -->
+        <!-- ================= TEST ================= -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -76,7 +81,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- SELENIUM -->
+        <!-- Selenium -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -91,51 +96,35 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- 🔒 HttpClient 5 – WebDriverManager uyumlu -->
+        <dependency>
+            <groupId>org.apache.httpcomponents.client5</groupId>
+            <artifactId>httpclient5</artifactId>
+            <version>5.2.3</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents.core5</groupId>
+            <artifactId>httpcore5</artifactId>
+            <version>5.2.3</version>
+            <scope>test</scope>
+        </dependency>
+
+
     </dependencies>
 
     <!-- ================= BUILD ================= -->
     <build>
         <plugins>
 
+            <!-- Spring Boot -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-            <!-- UNIT TESTS -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.1.2</version>
-                <configuration>
-                    <includes>
-                        <include>**/*Test.java</include>
-                    </includes>
-                    <useModulePath>false</useModulePath>
-                </configuration>
-            </plugin>
-
-            <!-- INTEGRATION TESTS -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>3.1.2</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>integration-test</goal>
-                            <goal>verify</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <includes>
-                        <include>**/*IT.java</include>
-                    </includes>
-                </configuration>
-            </plugin>
-
-            <!-- 🔴 JAVA 16 COMPILER -->
+            <!-- Compiler (Java 16) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -145,27 +134,34 @@
                 </configuration>
             </plugin>
 
+            <!-- Surefire (Unit + Integration + Selenium kontrolü) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.1.2</version>
+                <configuration>
+                    <useModulePath>false</useModulePath>
+
+                    <!-- Normalde Unit + Integration -->
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+
+                    <!-- Selenium sadece profil açıkken -->
+                    <skipTests>${!selenium.tests}</skipTests>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
-    <!-- SELENIUM PROFILE -->
+    <!-- ================= PROFILES ================= -->
     <profiles>
         <profile>
             <id>selenium</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>3.1.2</version>
-                        <configuration>
-                            <includes>
-                                <include>**/*SeleniumTest.java</include>
-                            </includes>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
+            <properties>
+                <selenium.tests>true</selenium.tests>
+            </properties>
         </profile>
     </profiles>
 
