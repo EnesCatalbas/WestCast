@@ -43,14 +43,19 @@ pipeline {
     }
 
     post {
-        always {
-            echo '🟢 Cleaning up backend process...'
-            bat '''
-                for /f "tokens=5" %%p in ('netstat -ano ^| find ":8081" ^| find "LISTENING"') do (
-                    taskkill /PID %%p /F
-                )
-                exit 0
-            '''
-        }
+    always {
+        echo '🟢 Temizlik yapılıyor...'
+        bat '''
+            @echo off
+            :: 1. Backend'i kapat (8081)
+            for /f "tokens=5" %%p in ('netstat -ano ^| find ":8081" ^| find "LISTENING"') do taskkill /PID %%p /F 2>nul
+            
+            :: 2. Arkada kalan Chrome ve Driver süreçlerini zorla kapat
+            taskkill /F /IM chromedriver.exe /T 2>nul
+            taskkill /F /IM chrome.exe /T 2>nul
+            
+            exit 0
+        '''
     }
+}
 }
