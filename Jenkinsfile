@@ -8,6 +8,14 @@ pipeline {
 
     stages {
 
+        stage('1- Checkout from GitHub') {
+            steps {
+                git branch: 'master',
+                    credentialsId: 'github-credentials',
+                    url: 'https://github.com/EnesCatalbas/WestCast.git'
+            }
+        }
+
         stage('2- Build Project') {
             steps {
                 bat 'mvn clean compile'
@@ -38,10 +46,12 @@ pipeline {
 
         stage('5- Docker Build & Run') {
             steps {
-                bat 'docker build -t westcast-app .'
-                bat 'docker rm -f westcast-container || exit 0'
-                bat 'docker run -d -p 8080:8080 --name westcast-container westcast-app'
-                bat 'timeout /t 15'
+                script {
+                    bat 'docker build -t westcast-app .'
+                    bat 'docker rm -f westcast-container || exit 0'
+                    bat 'docker run -d -p 8080:8080 --name westcast-container westcast-app'
+                    bat 'timeout /t 15'
+                }
             }
         }
 
@@ -72,8 +82,15 @@ pipeline {
 
     post {
         always {
-            bat 'docker stop westcast-container || exit 0'
-            bat 'docker rm westcast-container || exit 0'
+            script {
+                if (isUnix()) {
+                    sh 'docker stop westcast-container || true'
+                    sh 'docker rm westcast-container || true'
+                } else {
+                    bat 'docker stop westcast-container || exit 0'
+                    bat 'docker rm westcast-container || exit 0'
+                }
+            }
         }
     }
 }
