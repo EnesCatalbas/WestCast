@@ -29,9 +29,10 @@ pipeline {
         stage('3- Start Backend (port 8081)') {
             steps {
                 echo '🚀 Starting backend on port 8081...'
+                // Jenkins Windows ortamında timeout yerine powershell kullan
                 bat '''
-                    start /B mvn spring-boot:run -Dserver.port=8081
-                    timeout /t 15
+                    start "" cmd /c "mvn spring-boot:run -Dserver.port=8081 > backend.log 2>&1"
+                    powershell -Command "Start-Sleep -Seconds 15"
                 '''
             }
         }
@@ -106,8 +107,10 @@ pipeline {
     post {
         always {
             echo '🟢 Cleaning up backend process...'
+            // Eğer backend hâlâ 8081’de dinliyorsa kapat
             bat '''
                 for /f "tokens=5" %%p in ('netstat -ano ^| find ":8081" ^| find "LISTENING"') do taskkill /PID %%p /F
+                exit 0
             '''
         }
     }
