@@ -29,11 +29,15 @@ pipeline {
             post {
                 always {
                     script {
-                        def reports = findFiles(glob: 'target/surefire-reports/*.xml')
-                        if (reports.length > 0) {
-                            junit 'target/surefire-reports/*.xml'
-                        } else {
-                            echo '⚠️ No surefire test reports found.'
+                        try {
+                            def reports = findFiles(glob: 'target/surefire-reports/*.xml')
+                            if (reports.length > 0) {
+                                junit 'target/surefire-reports/*.xml'
+                            } else {
+                                echo '⚠️ No unit test reports found.'
+                            }
+                        } catch (err) {
+                            echo "⚠️ Error processing JUnit reports: ${err}"
                         }
                     }
                 }
@@ -47,11 +51,15 @@ pipeline {
             post {
                 always {
                     script {
-                        def reports = findFiles(glob: 'target/failsafe-reports/*.xml')
-                        if (reports.length > 0) {
-                            junit 'target/failsafe-reports/*.xml'
-                        } else {
-                            echo '⚠️ No failsafe reports found.'
+                        try {
+                            def reports = findFiles(glob: 'target/failsafe-reports/*.xml')
+                            if (reports.length > 0) {
+                                junit 'target/failsafe-reports/*.xml'
+                            } else {
+                                echo '⚠️ No integration test reports found.'
+                            }
+                        } catch (err) {
+                            echo "⚠️ Error processing failsafe reports: ${err}"
                         }
                     }
                 }
@@ -69,10 +77,6 @@ pipeline {
             }
         }
 
-        // ======================
-        // Selenium Test Stages
-        // ======================
-
         stage('6- Selenium - General Tests') {
             steps {
                 bat 'mvn test -Pselenium -Dtest=GeneralSeleniumTest'
@@ -80,11 +84,15 @@ pipeline {
             post {
                 always {
                     script {
-                        def reports = findFiles(glob: 'target/surefire-reports/*.xml')
-                        if (reports.length > 0) {
-                            junit 'target/surefire-reports/*.xml'
-                        } else {
-                            echo '⚠️ No Selenium (General) reports found.'
+                        try {
+                            def reports = findFiles(glob: 'target/surefire-reports/*.xml')
+                            if (reports.length > 0) {
+                                junit 'target/surefire-reports/*.xml'
+                            } else {
+                                echo '⚠️ No Selenium (General) reports found.'
+                            }
+                        } catch (err) {
+                            echo "⚠️ Error in Selenium (General) report handling: ${err}"
                         }
                     }
                 }
@@ -98,11 +106,15 @@ pipeline {
             post {
                 always {
                     script {
-                        def reports = findFiles(glob: 'target/surefire-reports/*.xml')
-                        if (reports.length > 0) {
-                            junit 'target/surefire-reports/*.xml'
-                        } else {
-                            echo '⚠️ No Selenium (Login) reports found.'
+                        try {
+                            def reports = findFiles(glob: 'target/surefire-reports/*.xml')
+                            if (reports.length > 0) {
+                                junit 'target/surefire-reports/*.xml'
+                            } else {
+                                echo '⚠️ No Selenium (Login) reports found.'
+                            }
+                        } catch (err) {
+                            echo "⚠️ Error in Selenium (Login) report handling: ${err}"
                         }
                     }
                 }
@@ -116,11 +128,15 @@ pipeline {
             post {
                 always {
                     script {
-                        def reports = findFiles(glob: 'target/surefire-reports/*.xml')
-                        if (reports.length > 0) {
-                            junit 'target/surefire-reports/*.xml'
-                        } else {
-                            echo '⚠️ No Selenium (Movie Search) reports found.'
+                        try {
+                            def reports = findFiles(glob: 'target/surefire-reports/*.xml')
+                            if (reports.length > 0) {
+                                junit 'target/surefire-reports/*.xml'
+                            } else {
+                                echo '⚠️ No Selenium (Movie Search) reports found.'
+                            }
+                        } catch (err) {
+                            echo "⚠️ Error in Selenium (Movie Search) report handling: ${err}"
                         }
                     }
                 }
@@ -134,11 +150,15 @@ pipeline {
             post {
                 always {
                     script {
-                        def reports = findFiles(glob: 'target/surefire-reports/*.xml')
-                        if (reports.length > 0) {
-                            junit 'target/surefire-reports/*.xml'
-                        } else {
-                            echo '⚠️ No Selenium (Signup) reports found.'
+                        try {
+                            def reports = findFiles(glob: 'target/surefire-reports/*.xml')
+                            if (reports.length > 0) {
+                                junit 'target/surefire-reports/*.xml'
+                            } else {
+                                echo '⚠️ No Selenium (Signup) reports found.'
+                            }
+                        } catch (err) {
+                            echo "⚠️ Error in Selenium (Signup) report handling: ${err}"
                         }
                     }
                 }
