@@ -6,84 +6,72 @@ pipeline {
         jdk 'JDK17'
     }
 
-    environment {
-        MAVEN_OPTS = "-Dmaven.test.failure.ignore=false"
-    }
-
     stages {
 
-        stage('1- Checkout from GitHub') {
+        stage('Checkout') {
             steps {
-                git branch: 'main',
-                    credentialsId: 'github-credentials',
-                    url: 'https://github.com/KULLANICI_ADIN/WESTCAST.git'
+                git 'https://github.com/EnesCatalbas/WestCast.git'
             }
         }
 
-        stage('2- Build Project') {
+        stage('Build') {
             steps {
-                sh 'mvn clean compile'
+                sh 'mvn clean package -DskipTests'
             }
         }
 
-        stage('3- Unit Tests') {
+        stage('Unit Tests') {
             steps {
-                sh 'mvn test -Dtest=UserServiceTest'
-            }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
+                sh 'mvn test -Dtest=**/*Test'
             }
         }
 
-        stage('4- Integration Tests') {
+        stage('Integration Tests') {
             steps {
-                sh 'mvn verify -Dtest=UserControllerIT'
-            }
-            post {
-                always {
-                    junit 'target/failsafe-reports/*.xml'
-                }
+                sh 'mvn test -Dtest=**/*IT'
             }
         }
 
-        stage('5- Docker Build & Run') {
+        stage('Docker Build & Run') {
             steps {
-                sh 'docker build -t westcast-app .'
-                sh 'docker run -d -p 8080:8080 --name westcast-container westcast-app'
+                sh '''
+                docker build -t westcast-app .
+                docker rm -f westcast-container || true
+                docker run -d -p 8080:8080 --name westcast-container westcast-app
+                '''
             }
         }
 
-        stage('6- Selenium - General Tests') {
+        stage('Selenium Tests - Scenario 1') {
             steps {
-                sh 'mvn test -Dtest=GeneralSeleniumTest'
+                sh 'mvn test -Dtest=main.selenium.LoginSeleniumTest'
             }
         }
 
-        stage('7- Selenium - Login Tests') {
+        stage('Selenium Tests - Scenario 2') {
             steps {
-                sh 'mvn test -Dtest=LoginSeleniumTest'
+                sh 'mvn test -Dtest=main.selenium.SignupSeleniumTest'
             }
         }
 
-        stage('8- Selenium - Movie Search Tests') {
+        stage('Selenium Tests - Scenario 3') {
             steps {
-                sh 'mvn test -Dtest=MovieSearchSeleniumTest'
-            }
-        }
-
-        stage('9- Selenium - Signup Tests') {
-            steps {
-                sh 'mvn test -Dtest=SignupSeleniumTest'
+                sh 'mvn test -Dtest=main.selenium.MovieSearchSeleniumTest'
             }
         }
     }
 
     post {
         always {
-            sh 'docker stop westcast-container || true'
-            sh 'docker rm westcast-container || true'
+            junit 'target/surefire-reports/*.xml'
+        }
+
+        success {
+            echo '✅ Tüm CI/CD aşamaları başarıyla tamamlandı'
+        }
+
+        failure {
+            echo '❌ Pipeline başarısız oldu'
         }
     }
 }
