@@ -7,98 +7,36 @@ pipeline {
     }
 
     stages {
-
-        stage('1- Checkout from GitHub') {
+        stage('1- Checkout') {
             steps {
-                git branch: 'master',
-                    credentialsId: 'github-credentials',
-                    url: 'https://github.com/EnesCatalbas/WestCast.git'
+                git branch: 'master', credentialsId: 'github-credentials', url: 'https://github.com/EnesCatalbas/WestCast.git'
             }
         }
 
         stage('2- Build Project') {
             steps {
-                bat '''
-                    echo Cleaning and compiling project...
-                    if exist target (rmdir /s /q target)
-                    mvn clean compile
-                '''
+                bat 'mvn clean compile -DskipTests'
             }
         }
 
-        stage('3- Start Backend (port 8081)') {
+        stage('3- Start Backend') {
             steps {
                 echo '🚀 Starting backend on port 8081...'
-                // Jenkins Windows ortamında timeout yerine powershell kullan
                 bat '''
                     start "" cmd /c "mvn spring-boot:run -Dserver.port=8081 > backend.log 2>&1"
-                    powershell -Command "Start-Sleep -Seconds 15"
+                    powershell -Command "Start-Sleep -Seconds 30"
                 '''
             }
         }
 
-        stage('4- Unit Tests') {
+        stage('4- Run All Tests') {
             steps {
-                bat 'mvn test -Dtest=UserServiceTest'
+                // Tüm testleri tek seferde veya ayrı ayrı çalıştırabilirsiniz
+                bat 'mvn test -Pselenium -Dapp.url=http://localhost:8081'
             }
             post {
                 always {
-                    junit allowEmptyResults: true, keepLongStdio: true, skipPublishingChecks: true, testResults: 'target/surefire-reports/*.xml'
-                }
-            }
-        }
-
-        stage('5- Integration Tests') {
-            steps {
-                bat 'mvn test -Dtest=UserControllerIT'
-            }
-            post {
-                always {
-                    junit allowEmptyResults: true, keepLongStdio: true, skipPublishingChecks: true, testResults: 'target/surefire-reports/*.xml'
-                }
-            }
-        }
-
-        stage('6- Selenium - General Tests') {
-            steps {
-                bat 'mvn test -Pselenium -Dapp.url=http://localhost:8081 -Dtest=GeneralSeleniumTest'
-            }
-            post {
-                always {
-                    junit allowEmptyResults: true, keepLongStdio: true, skipPublishingChecks: true, testResults: 'target/surefire-reports/*.xml'
-                }
-            }
-        }
-
-        stage('7- Selenium - Login Tests') {
-            steps {
-                bat 'mvn test -Pselenium -Dapp.url=http://localhost:8081 -Dtest=LoginSeleniumTest'
-            }
-            post {
-                always {
-                    junit allowEmptyResults: true, keepLongStdio: true, skipPublishingChecks: true, testResults: 'target/surefire-reports/*.xml'
-                }
-            }
-        }
-
-        stage('8- Selenium - Movie Search Tests') {
-            steps {
-                bat 'mvn test -Pselenium -Dapp.url=http://localhost:8081 -Dtest=MovieSearchSeleniumTest'
-            }
-            post {
-                always {
-                    junit allowEmptyResults: true, keepLongStdio: true, skipPublishingChecks: true, testResults: 'target/surefire-reports/*.xml'
-                }
-            }
-        }
-
-        stage('9- Selenium - Signup Tests') {
-            steps {
-                bat 'mvn test -Pselenium -Dapp.url=http://localhost:8081 -Dtest=SignupSeleniumTest'
-            }
-            post {
-                always {
-                    junit allowEmptyResults: true, keepLongStdio: true, skipPublishingChecks: true, testResults: 'target/surefire-reports/*.xml'
+                    junit testResults: 'target/surefire-reports/*.xml', allowEmptyResults: true
                 }
             }
         }
@@ -107,9 +45,10 @@ pipeline {
     post {
         always {
             echo '🟢 Cleaning up backend process...'
-            // Eğer backend hâlâ 8081’de dinliyorsa kapat
             bat '''
-                for /f "tokens=5" %%p in ('netstat -ano ^| find ":8081" ^| find "LISTENING"') do taskkill /PID %%p /F
+                for /f "tokens=5" %%p in ('netstat -ano ^| find ":8081" ^| find "LISTENING"') do (
+                    taskkill /PID %%p /F
+                )
                 exit 0
             '''
         }
