@@ -36,11 +36,10 @@ public class LoginSeleniumTest extends BaseTest {
     }
 
     @Test
-    @Disabled("Jenkins üzerinde element bulunamadığı için geçici olarak kapatıldı")
     void loginWithWrongPassword_shouldFail() {
         ApiTestHelper.signup("wrongPassUser2", "1234");
 
-        driver.get("http://localhost:8080/login.html");
+        driver.get("http://localhost:8081/login.html");
 
         driver.findElement(By.id("username")).sendKeys("wrongPassUser2");
         driver.findElement(By.id("password")).sendKeys("9999");
