@@ -18,64 +18,77 @@ pipeline {
 
         stage('2- Build Project') {
             steps {
-                bat 'mvn clean compile'
+                dir('backend') {
+                    bat 'mvn clean compile'
+                }
             }
         }
 
         stage('3- Unit Tests') {
             steps {
-                bat 'mvn test -Dtest=UserServiceTest'
+                dir('backend') {
+                    bat 'mvn test -Dtest=UserServiceTest'
+                }
             }
             post {
                 always {
-                    junit 'target/surefire-reports/*.xml'
+                    junit 'backend/target/surefire-reports/*.xml'
                 }
             }
         }
 
         stage('4- Integration Tests') {
             steps {
-                bat 'mvn verify -Dtest=UserControllerIT'
+                dir('backend') {
+                    bat 'mvn verify -Dtest=UserControllerIT'
+                }
             }
             post {
                 always {
-                    junit 'target/failsafe-reports/*.xml'
+                    junit 'backend/target/failsafe-reports/*.xml'
                 }
             }
         }
 
         stage('5- Docker Build & Run') {
             steps {
-                script {
-                    bat 'docker build -t westcast-app .'
-                    bat 'docker rm -f westcast-container || exit 0'
-                    bat 'docker run -d -p 8080:8080 --name westcast-container westcast-app'
-                    bat 'timeout /t 15'
+                bat 'docker build -t westcast-app ./backend'
+                bat 'docker rm -f westcast-container || exit 0'
+                bat 'docker run -d -p 8080:8080 --name westcast-container westcast-app'
+                bat 'timeout /t 15'
+            }
+        }
+
+        stage('6- Selenium Tests') {
+            parallel {
+                stage('General Tests') {
+                    steps {
+                        dir('backend') {
+                            bat 'mvn test -Dtest=GeneralSeleniumTest'
+                        }
+                    }
                 }
-            }
-        }
-
-        stage('6- Selenium - General Tests') {
-            steps {
-                bat 'mvn test -Dtest=GeneralSeleniumTest'
-            }
-        }
-
-        stage('7- Selenium - Login Tests') {
-            steps {
-                bat 'mvn test -Dtest=LoginSeleniumTest'
-            }
-        }
-
-        stage('8- Selenium - Movie Search Tests') {
-            steps {
-                bat 'mvn test -Dtest=MovieSearchSeleniumTest'
-            }
-        }
-
-        stage('9- Selenium - Signup Tests') {
-            steps {
-                bat 'mvn test -Dtest=SignupSeleniumTest'
+                stage('Login Tests') {
+                    steps {
+                        dir('backend') {
+                            bat 'mvn test -Dtest=LoginSeleniumTest'
+                        }
+                    }
+                }
+                stage('Movie Search Tests') {
+                    steps {
+                        dir('backend') {
+                            bat 'mvn test -Dtest=MovieSearchSeleniumTest'
+                        }
+                    }
+                }
+                stage('Signup Tests') {
+                    steps {
+                        dir('backend') {
+                            bat 'mvn test -Dtest=SignupSeleniumTest'
+                        }
+                    }
+                }
             }
         }
     }
