@@ -10,10 +10,10 @@ public class SignupSeleniumTest extends BaseTest {
 
     @Test
     void testSignupWithSelenium() {
-
         driver.get("http://localhost:8080/signup.html");
 
-        driver.findElement(By.id("username")).sendKeys("seleniumUser2");
+        String uniqueUser = "seleniumUser_" + System.currentTimeMillis();
+        driver.findElement(By.id("username")).sendKeys(uniqueUser);
         driver.findElement(By.id("password")).sendKeys("1234");
         driver.findElement(By.id("signupBtn")).click();
 
@@ -24,6 +24,7 @@ public class SignupSeleniumTest extends BaseTest {
                 "Signup başarısız! Sayfa içeriği: " + pageSource
         );
     }
+
 
     @Test
     void signupWithExistingUser_shouldFail() {

@@ -19,14 +19,24 @@ pipeline {
         stage('2- Build Project') {
             steps {
                 bat '''
-                    echo Starting clean build...
+                    echo Cleaning and compiling project...
                     if exist target (rmdir /s /q target)
                     mvn clean compile
                 '''
             }
         }
 
-        stage('3- Unit Tests') {
+        stage('3- Start Backend (port 8081)') {
+            steps {
+                echo 'Starting backend on port 8081...'
+                bat '''
+                    start /B mvn spring-boot:run -Dserver.port=8081
+                    timeout /t 15
+                '''
+            }
+        }
+
+        stage('4- Unit Tests') {
             steps {
                 bat 'mvn test -Dtest=UserServiceTest'
             }
@@ -37,7 +47,7 @@ pipeline {
             }
         }
 
-        stage('4- Integration Tests') {
+        stage('5- Integration Tests') {
             steps {
                 bat 'mvn test -Dtest=UserControllerIT'
             }
@@ -48,22 +58,9 @@ pipeline {
             }
         }
 
-        /* 
-        stage('5- Docker Build & Run') {
+        stage('6- Selenium - General Tests') {
             steps {
-                script {
-                    bat 'docker build -t westcast-app .'
-                    bat 'docker rm -f westcast-container || exit 0'
-                    bat 'docker run -d -p 8080:8080 --name westcast-container westcast-app'
-                    bat 'timeout /t 15'
-                }
-            }
-        }
-        */
-
-        stage('5- Selenium - General Tests') {
-            steps {
-                bat 'mvn test -Pselenium -Dtest=GeneralSeleniumTest'
+                bat 'mvn test -Pselenium -Dapp.url=http://localhost:8081 -Dtest=GeneralSeleniumTest'
             }
             post {
                 always {
@@ -72,9 +69,9 @@ pipeline {
             }
         }
 
-        stage('6- Selenium - Login Tests') {
+        stage('7- Selenium - Login Tests') {
             steps {
-                bat 'mvn test -Pselenium -Dtest=LoginSeleniumTest'
+                bat 'mvn test -Pselenium -Dapp.url=http://localhost:8081 -Dtest=LoginSeleniumTest'
             }
             post {
                 always {
@@ -83,9 +80,9 @@ pipeline {
             }
         }
 
-        stage('7- Selenium - Movie Search Tests') {
+        stage('8- Selenium - Movie Search Tests') {
             steps {
-                bat 'mvn test -Pselenium -Dtest=MovieSearchSeleniumTest'
+                bat 'mvn test -Pselenium -Dapp.url=http://localhost:8081 -Dtest=MovieSearchSeleniumTest'
             }
             post {
                 always {
@@ -94,9 +91,9 @@ pipeline {
             }
         }
 
-        stage('8- Selenium - Signup Tests') {
+        stage('9- Selenium - Signup Tests') {
             steps {
-                bat 'mvn test -Pselenium -Dtest=SignupSeleniumTest'
+                bat 'mvn test -Pselenium -Dapp.url=http://localhost:8081 -Dtest=SignupSeleniumTest'
             }
             post {
                 always {
@@ -108,16 +105,10 @@ pipeline {
 
     post {
         always {
-            echo '🟢 Pipeline completed successfully. Cleaning up...'
-
-            // Docker temizliği şimdilik kapalı
-            // if (isUnix()) {
-            //     sh 'docker stop westcast-container || true'
-            //     sh 'docker rm westcast-container || true'
-            // } else {
-            //     bat 'docker stop westcast-container || exit 0'
-            //     bat 'docker rm westcast-container || exit 0'
-            // }
+            echo '🟢 Cleaning up backend process...'
+            bat '''
+                for /f "tokens=5" %%p in ('netstat -ano ^| find ":8081" ^| find "LISTENING"') do taskkill /PID %%p /F
+            '''
         }
     }
 }
