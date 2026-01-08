@@ -7,7 +7,9 @@ C:\Users\lenovo\IdeaProjects\WestCast\src\main\java\application\service\MovieSer
 C:\Users\lenovo\IdeaProjects\WestCast\src\main\java\application\controller\UserController.java
 C:\Users\lenovo\IdeaProjects\WestCast\src\main\java\application\model\Episode.java
 C:\Users\lenovo\IdeaProjects\WestCast\src\main\java\application\security\JwtUtil.java
+C:\Users\lenovo\IdeaProjects\WestCast\src\main\java\application\controller\MovieController.java
 C:\Users\lenovo\IdeaProjects\WestCast\src\main\java\application\model\Production.java
+C:\Users\lenovo\IdeaProjects\WestCast\src\main\java\application\security\DataInitializer.java
 C:\Users\lenovo\IdeaProjects\WestCast\src\main\java\application\WestCastApplication.java
 C:\Users\lenovo\IdeaProjects\WestCast\src\main\java\application\model\IUser.java
 C:\Users\lenovo\IdeaProjects\WestCast\src\main\java\application\security\JwtFilter.java

@@ -1,6 +1,8 @@
-main\controller\UserControllerIntegrationTest.class
-main\selenium\SearchApiTest.class
+main\selenium\LoginSeleniumTest.class
 main\service\UserServiceTest.class
-main\selenium\LoginApiTest.class
 main\selenium\BaseTest.class
-main\selenium\SignUpApiTest.class
+main\selenium\ApiTestHelper.class
+main\selenium\GeneralSeleniumTest.class
+main\selenium\SignupSeleniumTest.class
+main\selenium\MovieSearchSeleniumTest.class
+main\controller\UserControllerIT.class

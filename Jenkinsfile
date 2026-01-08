@@ -32,7 +32,7 @@ pipeline {
             }
             post {
                 always {
-                    junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+                    junit allowEmptyResults: true, keepLongStdio: true, skipPublishingChecks: true, testResults: 'target/surefire-reports/*.xml'
                 }
             }
         }
@@ -43,14 +43,12 @@ pipeline {
             }
             post {
                 always {
-                    junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+                    junit allowEmptyResults: true, keepLongStdio: true, skipPublishingChecks: true, testResults: 'target/surefire-reports/*.xml'
                 }
             }
         }
 
-        // Docker aşaması şimdilik devre dışı
-        // İstersen sonra açarız
-        /*
+        /* 
         stage('5- Docker Build & Run') {
             steps {
                 script {
@@ -69,7 +67,7 @@ pipeline {
             }
             post {
                 always {
-                    junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+                    junit allowEmptyResults: true, keepLongStdio: true, skipPublishingChecks: true, testResults: 'target/surefire-reports/*.xml'
                 }
             }
         }
@@ -80,7 +78,7 @@ pipeline {
             }
             post {
                 always {
-                    junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+                    junit allowEmptyResults: true, keepLongStdio: true, skipPublishingChecks: true, testResults: 'target/surefire-reports/*.xml'
                 }
             }
         }
@@ -91,7 +89,7 @@ pipeline {
             }
             post {
                 always {
-                    junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+                    junit allowEmptyResults: true, keepLongStdio: true, skipPublishingChecks: true, testResults: 'target/surefire-reports/*.xml'
                 }
             }
         }
@@ -102,7 +100,7 @@ pipeline {
             }
             post {
                 always {
-                    junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+                    junit allowEmptyResults: true, keepLongStdio: true, skipPublishingChecks: true, testResults: 'target/surefire-reports/*.xml'
                 }
             }
         }
@@ -110,9 +108,9 @@ pipeline {
 
     post {
         always {
-            echo '🟢 Build completed successfully. Cleaning up (if needed)...'
+            echo '🟢 Pipeline completed successfully. Cleaning up...'
 
-            // Docker cleanup (şimdilik etkisiz)
+            // Docker temizliği şimdilik kapalı
             // if (isUnix()) {
             //     sh 'docker stop westcast-container || true'
             //     sh 'docker rm westcast-container || true'
