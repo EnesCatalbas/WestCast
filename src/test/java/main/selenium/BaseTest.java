@@ -25,15 +25,6 @@ public class BaseTest {
         driver = new ChromeDriver(options);
     }
 
-    // Eğer driver nesnen static ise:
     @AfterAll
-    static void tearDownAll() {
-        if (driver != null) {
-            try {
-                driver.quit();
-            } catch (Exception e) {
-                System.out.println("Driver zaten kapalı: " + e.getMessage());
-            }
-        }
-    }
+    public static void tearDown() {}
 }
