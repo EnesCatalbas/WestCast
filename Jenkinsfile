@@ -31,22 +31,12 @@ pipeline {
 
         stage('4- Run All Tests') {
             steps {
+                // Tüm testleri tek seferde veya ayrı ayrı çalıştırabilirsiniz
                 bat 'mvn test -Pselenium -Dapp.url=http://localhost:8081'
             }
             post {
                 always {
                     junit testResults: 'target/surefire-reports/*.xml', allowEmptyResults: true
-                }
-            }
-        }
-
-        // --- YENİ EKLENEN DOCKER AŞAMASI ---
-        stage('5- Docker Build') {
-            steps {
-                echo '🐳 Building Docker Image...'
-                script {
-                    // İmaj ismini projenize göre değiştirebilirsiniz
-                    bat "docker build -t westcast-app:latest ."
                 }
             }
         }
