@@ -28,7 +28,14 @@ pipeline {
             }
             post {
                 always {
-                    junit 'target/surefire-reports/*.xml'
+                    script {
+                        def reports = findFiles(glob: 'target/surefire-reports/*.xml')
+                        if (reports.length > 0) {
+                            junit 'target/surefire-reports/*.xml'
+                        } else {
+                            echo '⚠️ No surefire test reports found.'
+                        }
+                    }
                 }
             }
         }
@@ -39,7 +46,14 @@ pipeline {
             }
             post {
                 always {
-                    junit 'target/failsafe-reports/*.xml'
+                    script {
+                        def reports = findFiles(glob: 'target/failsafe-reports/*.xml')
+                        if (reports.length > 0) {
+                            junit 'target/failsafe-reports/*.xml'
+                        } else {
+                            echo '⚠️ No failsafe reports found.'
+                        }
+                    }
                 }
             }
         }
@@ -55,27 +69,79 @@ pipeline {
             }
         }
 
+        // ======================
+        // Selenium Test Stages
+        // ======================
+
         stage('6- Selenium - General Tests') {
             steps {
-                bat 'mvn test -Dtest=GeneralSeleniumTest'
+                bat 'mvn test -Pselenium -Dtest=GeneralSeleniumTest'
+            }
+            post {
+                always {
+                    script {
+                        def reports = findFiles(glob: 'target/surefire-reports/*.xml')
+                        if (reports.length > 0) {
+                            junit 'target/surefire-reports/*.xml'
+                        } else {
+                            echo '⚠️ No Selenium (General) reports found.'
+                        }
+                    }
+                }
             }
         }
 
         stage('7- Selenium - Login Tests') {
             steps {
-                bat 'mvn test -Dtest=LoginSeleniumTest'
+                bat 'mvn test -Pselenium -Dtest=LoginSeleniumTest'
+            }
+            post {
+                always {
+                    script {
+                        def reports = findFiles(glob: 'target/surefire-reports/*.xml')
+                        if (reports.length > 0) {
+                            junit 'target/surefire-reports/*.xml'
+                        } else {
+                            echo '⚠️ No Selenium (Login) reports found.'
+                        }
+                    }
+                }
             }
         }
 
         stage('8- Selenium - Movie Search Tests') {
             steps {
-                bat 'mvn test -Dtest=MovieSearchSeleniumTest'
+                bat 'mvn test -Pselenium -Dtest=MovieSearchSeleniumTest'
+            }
+            post {
+                always {
+                    script {
+                        def reports = findFiles(glob: 'target/surefire-reports/*.xml')
+                        if (reports.length > 0) {
+                            junit 'target/surefire-reports/*.xml'
+                        } else {
+                            echo '⚠️ No Selenium (Movie Search) reports found.'
+                        }
+                    }
+                }
             }
         }
 
         stage('9- Selenium - Signup Tests') {
             steps {
-                bat 'mvn test -Dtest=SignupSeleniumTest'
+                bat 'mvn test -Pselenium -Dtest=SignupSeleniumTest'
+            }
+            post {
+                always {
+                    script {
+                        def reports = findFiles(glob: 'target/surefire-reports/*.xml')
+                        if (reports.length > 0) {
+                            junit 'target/surefire-reports/*.xml'
+                        } else {
+                            echo '⚠️ No Selenium (Signup) reports found.'
+                        }
+                    }
+                }
             }
         }
     }
