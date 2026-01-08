@@ -9,7 +9,7 @@ public class MovieSearchSeleniumTest extends BaseTest {
 
     @Test
     void testSearchMovie() throws InterruptedException {
-        driver.get("http://localhost:8080/search.html");
+        driver.get("http://localhost:8081/search.html");
 
         driver.findElement(By.id("searchInput")).sendKeys("matrix");
         driver.findElement(By.id("searchBtn")).click();
@@ -23,7 +23,7 @@ public class MovieSearchSeleniumTest extends BaseTest {
 
     @Test
     void testSearchMovieNotFound() throws InterruptedException {
-        driver.get("http://localhost:8080/search.html");
+        driver.get("http://localhost:8081/search.html");
 
         driver.findElement(By.id("searchInput")).sendKeys("olmayanfilm123");
         driver.findElement(By.id("searchBtn")).click();

@@ -5,7 +5,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class ApiTestHelper {
 
-    private static final String BASE_URL = "http://localhost:8080";
+    private static final String BASE_URL = "http://localhost:8081";
 
     private static HttpHeaders formHeaders() {
         HttpHeaders headers = new HttpHeaders();

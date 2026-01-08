@@ -9,16 +9,16 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class GeneralSeleniumTest extends BaseTest {
     @Test
     void publicPages_shouldBeAccessible() {
-        driver.get("http://localhost:8080/login.html");
+        driver.get("http://localhost:8081/login.html");
         assertFalse(driver.getPageSource().contains("403"));
 
-        driver.get("http://localhost:8080/signup.html");
+        driver.get("http://localhost:8081/signup.html");
         assertFalse(driver.getPageSource().contains("403"));
     }
 
     @Test
     void applicationShouldBeUp() {
-        driver.get("http://localhost:8080");
+        driver.get("http://localhost:8081");
 
         String page = driver.getPageSource();
 

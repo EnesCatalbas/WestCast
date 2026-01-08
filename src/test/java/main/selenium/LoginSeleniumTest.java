@@ -12,7 +12,7 @@ public class LoginSeleniumTest extends BaseTest {
 
         ApiTestHelper.signup("seleniumUser", "1234");
 
-        driver.get("http://localhost:8080/login.html");
+        driver.get("http://localhost:8081/login.html");
 
         Thread.sleep(3000);
 
@@ -60,7 +60,7 @@ public class LoginSeleniumTest extends BaseTest {
 
     @Test
     void loginWithEmptyFields_shouldFail() {
-        driver.get("http://localhost:8080/login.html");
+        driver.get("http://localhost:8081/login.html");
 
         driver.findElement(By.id("loginBtn")).click();
 

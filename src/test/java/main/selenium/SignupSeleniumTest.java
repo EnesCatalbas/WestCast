@@ -10,7 +10,7 @@ public class SignupSeleniumTest extends BaseTest {
 
     @Test
     void testSignupWithSelenium() {
-        driver.get("http://localhost:8080/signup.html");
+        driver.get("http://localhost:8081/signup.html");
 
         String uniqueUser = "seleniumUser_" + System.currentTimeMillis();
         driver.findElement(By.id("username")).sendKeys(uniqueUser);
@@ -30,7 +30,7 @@ public class SignupSeleniumTest extends BaseTest {
     void signupWithExistingUser_shouldFail() {
         ApiTestHelper.signup("existingUser", "1234");
 
-        driver.get("http://localhost:8080/signup.html");
+        driver.get("http://localhost:8081/signup.html");
 
         driver.findElement(By.id("username")).sendKeys("existingUser");
         driver.findElement(By.id("password")).sendKeys("1234");
