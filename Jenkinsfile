@@ -10,21 +10,21 @@ pipeline {
 
         stage('1- Checkout') {
             steps {
-                echo '📥 Checking out from GitHub...'
+                echo ' Checking out from GitHub...'
                 git branch: 'master', credentialsId: 'github-credentials', url: 'https://github.com/EnesCatalbas/WestCast.git'
             }
         }
 
         stage('2- Build Project') {
             steps {
-                echo '🔧 Building project (skipping tests for faster compile)...'
+                echo ' Building project (skipping tests for faster compile)...'
                 bat 'mvn clean compile -DskipTests'
             }
         }
 
         stage('3- Start Backend') {
             steps {
-                echo '🚀 Starting backend on port 8081...'
+                echo ' Starting backend on port 8081...'
                 bat '''
                     start "" cmd /c "mvn spring-boot:run -Dserver.port=8081 > backend.log 2>&1"
                     powershell -Command "Start-Sleep -Seconds 30"
@@ -34,12 +34,12 @@ pipeline {
 
         stage('4- Run All Tests') {
             steps {
-                echo '🧪 Running all tests (unit + integration)...'
+                echo ' Running all tests (unit + integration)...'
                 bat 'mvn verify -Pselenium -Dapp.url=http://localhost:8081'
             }
             post {
                 always {
-                    echo '📊 Publishing JUnit test results...'
+                    echo 'Publishing JUnit test results...'
                     junit testResults: 'target/surefire-reports/*.xml, target/failsafe-reports/*.xml', allowEmptyResults: true
                 }
             }
@@ -57,10 +57,10 @@ pipeline {
             '''
         }
         success {
-            echo '✅ BUILD SUCCESSFUL: All tests passed!'
+            echo ' BUILD SUCCESSFUL: All tests passed!'
         }
         failure {
-            echo '❌ BUILD FAILED: Check the test reports for details.'
+            echo ' BUILD FAILED: Check the test reports for details.'
         }
     }
 }

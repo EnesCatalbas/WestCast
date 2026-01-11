@@ -15,14 +15,12 @@ public class SignupSeleniumTest extends BaseTest {
     void testSignupWithSelenium() {
         driver.get("http://localhost:8081/signup.html");
 
-        // Benzersiz kullanıcı adı oluşturma (Timestamp ile)
         String uniqueUser = "user_" + System.currentTimeMillis();
 
         driver.findElement(By.id("username")).sendKeys(uniqueUser);
         driver.findElement(By.id("password")).sendKeys("1234");
         driver.findElement(By.id("signupBtn")).click();
 
-        // ⏳ Sayfanın değişmesini veya içeriğin gelmesini bekle (En önemli kısım)
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
 
@@ -36,14 +34,12 @@ public class SignupSeleniumTest extends BaseTest {
 
     @Test
     void signupWithExistingUser_shouldFail() {
-        // Önce bir kullanıcı oluştur
         String existingUser = "fixedUser_" + System.currentTimeMillis();
         driver.get("http://localhost:8081/signup.html");
         driver.findElement(By.id("username")).sendKeys(existingUser);
         driver.findElement(By.id("password")).sendKeys("1234");
         driver.findElement(By.id("signupBtn")).click();
 
-        // Tekrar aynı kullanıcı ile dene
         driver.get("http://localhost:8081/signup.html");
         driver.findElement(By.id("username")).sendKeys(existingUser);
         driver.findElement(By.id("password")).sendKeys("1234");
