@@ -1,0 +1,16 @@
+application\model\IAdmin.class
+application\model\IUser.class
+application\model\Episode.class
+application\controller\UserController.class
+application\service\MovieService.class
+application\service\UserService.class
+application\model\Production.class
+application\repository\UserRepository.class
+application\model\User.class
+application\security\JwtFilter.class
+application\security\SecurityConfig.class
+application\WestCastApplication.class
+application\security\JwtUtil.class
+application\model\Movie.class
+application\controller\MovieController.class
+application\security\DataInitializer.class
