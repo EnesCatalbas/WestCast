@@ -7,6 +7,13 @@ pipeline {
     }
 
     stages {
+        stage('0- Clean Workspace') {
+            steps {
+                echo '🧹 Cleaning old artifacts...'
+                // Maven clean ile eski target klasörünü siliyoruz
+                bat 'mvn clean' 
+            }
+        }
 
         stage('1- Checkout') {
             steps {
@@ -17,8 +24,9 @@ pipeline {
 
         stage('2- Build Project') {
             steps {
-                echo '🔧 Building project (skipping tests for faster compile)...'
-                bat 'mvn clean compile -DskipTests'
+                echo '🔧 Building project...'
+                // Build aşamasında sadece compile yapıyoruz
+                bat 'mvn compile -DskipTests'
             }
         }
 
@@ -35,12 +43,14 @@ pipeline {
         stage('4- Run All Tests') {
             steps {
                 echo '🧪 Running all tests (unit + integration)...'
+                // Burada tekrar clean demenize gerek yok, verify yeterlidir.
                 bat 'mvn verify -Pselenium -Dapp.url=http://localhost:8081'
             }
             post {
                 always {
-                    echo '📊 Publishing JUnit test results...'
-                    junit testResults: 'target/surefire-reports/*.xml, target/failsafe-reports/*.xml', allowEmptyResults: true
+                    echo '📊 Publishing test results...'
+                    // Çift yıldız (**) kullanarak alt klasörlerdeki tüm xml'leri taramasını sağlıyoruz
+                    junit testResults: '**/target/*-reports/*.xml', allowEmptyResults: true
                 }
             }
         }
@@ -48,19 +58,13 @@ pipeline {
 
     post {
         always {
-            echo '🟢 Cleaning up backend process on port 8081...'
+            echo '🟢 Cleaning up backend process...'
             bat '''
                 for /f "tokens=5" %%p in ('netstat -ano ^| find ":8081" ^| find "LISTENING"') do (
                     taskkill /PID %%p /F
                 )
                 exit 0
             '''
-        }
-        success {
-            echo '✅ BUILD SUCCESSFUL: All tests passed!'
-        }
-        failure {
-            echo '❌ BUILD FAILED: Check the test reports for details.'
         }
     }
 }
