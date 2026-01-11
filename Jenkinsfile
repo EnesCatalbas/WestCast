@@ -31,25 +31,13 @@ pipeline {
 
         stage('4- Run All Tests') {
             steps {
-                echo '🧪 Running Unit, Integration and Selenium Tests...'
-                // 'verify' komutu Surefire (Unit) ve Failsafe (IT) testlerini beraber tetikler.
+                // 'test' yerine 'verify' yazarak IT (Integration Test) sınıflarını da dahil ettik.
                 bat 'mvn verify -Pselenium -Dapp.url=http://localhost:8081'
             }
             post {
                 always {
-                    // Hem Unit Test (*.xml) hem de Integration Test (*.xml) raporlarını toplar.
+                    // target klasörü altındaki hem surefire hem failsafe raporlarını toplar
                     junit testResults: 'target/*-reports/*.xml', allowEmptyResults: true
-                }
-            }
-        }
-        
-        // Önceki aşamada konuştuğumuz Docker adımını da buraya ekliyorum. 
-        // Testler başarılı olursa imaj oluşacaktır.
-        stage('5- Docker Build') {
-            steps {
-                echo '🐳 Building Docker Image...'
-                script {
-                    bat "docker build -t westcast-app:latest ."
                 }
             }
         }
