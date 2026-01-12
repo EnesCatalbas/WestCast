@@ -26,7 +26,9 @@ public class SecurityConfig {
                         "/login.html",
                         "/signup.html",
                         "/search.html",
-                        "/movies/search"
+                        "/movies/search",
+                        "/user/watchlist",
+                        "/user/watchlist/add"
                 ).permitAll()
                 .anyRequest().authenticated()
                 .and()

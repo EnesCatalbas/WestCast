@@ -13,6 +13,7 @@ import org.springframework.test.web.servlet.MvcResult;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.hamcrest.Matchers.*;
 
@@ -27,6 +28,8 @@ public class UserControllerIT {
     private MovieService movieService;
 
     private String token;
+
+    private String currentUserName;
 
     @BeforeEach
     void setUp() throws Exception {
@@ -164,5 +167,18 @@ public class UserControllerIT {
                 .andExpect(status().isOk());
     }
 
+    @Test
+    void testAddToWatchList_Success() throws Exception {
+        Movie movie = new Movie();
+        movie.setName("The Matrix");
+        movieService.getMovieList().add(movie);
+
+        mockMvc.perform(post("/user/watchlist/add")
+                        .param("userName", "testUser")
+                        .param("movieName", "Inception")
+                        .header("Authorization", "Bearer " + token))
+                .andDo(print())
+                .andExpect(status().isOk());
+    }
 
 }

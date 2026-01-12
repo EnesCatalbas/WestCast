@@ -1,6 +1,8 @@
 package application.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -39,5 +41,16 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @ElementCollection
+    private Set<String> watchList = new HashSet<>();
+
+    public Set<String> getWatchList() {
+        return watchList;
+    }
+
+    public void setWatchList(Set<String> watchList) {
+        this.watchList = watchList;
     }
 }

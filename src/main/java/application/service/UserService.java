@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 public class UserService implements IUser {
@@ -76,6 +78,32 @@ public class UserService implements IUser {
 
     public User findByUserName(String userName) {
         return userRepository.findByUserName(userName);
+    }
+
+    @Override
+    public void addToWatchList(String username, String movieName) {
+        User user = userRepository.findByUserName(username);
+        if (user == null) {
+            throw new RuntimeException("Kullanıcı bulunamadı: " + username);
+        }
+
+        Movie movie = search(movieName);
+        if (movie == null) {
+            throw new RuntimeException("Film bulunamadı!");
+        }
+
+        if (user.getWatchList() == null) {
+            user.setWatchList(new java.util.HashSet<>());
+        }
+
+        user.getWatchList().add(movieName);
+        userRepository.save(user);
+    }
+
+    @Override
+    public Set<String> getWatchList(String username) {
+        User user = userRepository.findByUserName(username);
+        return (user != null) ? user.getWatchList() : new HashSet<>();
     }
 
 }

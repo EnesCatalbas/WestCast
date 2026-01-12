@@ -115,4 +115,58 @@ public class UserServiceTest {
         assertEquals(9, score);
         assertEquals(9, movie.getRating());
     }
+
+    @Test
+    void testAddToWatchList_Success() {
+        // 1. HAZIRLIK (Gereksinimler: Mevcut bir kullanıcı ve mevcut bir film)
+        String username = "testUser";
+        String movieName = "Inception";
+        User mockUser = new User(username, "pass");
+
+        Movie movie = new Movie();
+        movie.setName(movieName);
+        movieService.getMovieList().add(movie);
+
+        // UserRepository'nin bu kullanıcıyı bulacağını simüle et
+        when(userRepository.findByUserName(username)).thenReturn(mockUser);
+
+        // 2. AKSİYON
+        userService.addToWatchList(username, movieName);
+
+        // 3. DOĞRULAMA
+        assertTrue(mockUser.getWatchList().contains(movieName), "Film listeye eklenmiş olmalı.");
+        verify(userRepository, times(1)).save(mockUser); // DB'ye kaydedildi mi?
+    }
+
+    @Test
+    void testAddToWatchList_MovieNotFound_ShouldThrowException() {
+        // HAZIRLIK: Kullanıcı var ama film sistemde yok
+        String username = "testUser";
+        User mockUser = new User(username, "pass");
+        when(userRepository.findByUserName(username)).thenReturn(mockUser);
+
+        // AKSİYON & DOĞRULAMA: Film listede olmadığı için hata fırlatmalı
+        assertThrows(RuntimeException.class, () -> {
+            userService.addToWatchList(username, "Geçersiz Film");
+        });
+    }
+
+    @Test
+    void testGetWatchList_ReturnsCorrectSet() {
+        // HAZIRLIK: İçinde zaten filmler olan bir kullanıcı simülasyonu
+        String username = "testUser";
+        User mockUser = new User(username, "pass");
+        mockUser.getWatchList().add("Matrix");
+        mockUser.getWatchList().add("Interstellar");
+
+        when(userRepository.findByUserName(username)).thenReturn(mockUser);
+
+        // AKSİYON
+        java.util.Set<String> result = userService.getWatchList(username);
+
+        // DOĞRULAMA
+        assertEquals(2, result.size());
+        assertTrue(result.contains("Matrix"));
+        assertTrue(result.contains("Interstellar"));
+    }
 }
