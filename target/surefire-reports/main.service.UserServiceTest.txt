@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: main.service.UserServiceTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.111 s -- in main.service.UserServiceTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.007 s -- in main.service.UserServiceTest

@@ -12,7 +12,7 @@ public class BaseTest {
     protected static WebDriver driver;
 
     @BeforeAll
-    public static void setUp() {
+    public static void setUp() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
@@ -23,6 +23,7 @@ public class BaseTest {
         options.addArguments("--start-maximized");
 
         driver = new ChromeDriver(options);
+        Thread.sleep(2000);
     }
 
     @AfterAll
