@@ -3,6 +3,7 @@ main\service\UserServiceTest.class
 main\selenium\BaseTest.class
 main\selenium\ApiTestHelper.class
 main\selenium\GeneralSeleniumTest.class
+main\selenium\WatchlistSeleniumTest.class
 main\selenium\SignupSeleniumTest.class
 main\selenium\MovieSearchSeleniumTest.class
 main\controller\UserControllerIT.class

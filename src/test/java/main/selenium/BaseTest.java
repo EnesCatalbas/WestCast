@@ -21,6 +21,9 @@ public class BaseTest {
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("--disable-gpu");
         options.addArguments("--start-maximized");
+        options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--allow-running-insecure-content");
+        options.addArguments("--ignore-certificate-errors");
 
         driver = new ChromeDriver(options);
         Thread.sleep(2000);

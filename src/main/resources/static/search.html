@@ -28,5 +28,27 @@
     }
 </script>
 
+<hr> <h3>İzleme Listesine Ekle</h3>
+<div>
+    <input id="movieName" placeholder="Film Adı">
+    <input id="userName" placeholder="Kullanıcı Adı">
+    <button id="addWatchlistBtn">Listeye Ekle</button>
+    <p id="watchlistResult"></p>
+</div>
+
+<script>
+    document.getElementById("addWatchlistBtn").addEventListener("click", async function() {
+        const mName = document.getElementById("movieName").value;
+        const uName = document.getElementById("userName").value;
+
+        // Backend @RequestParam beklediği için URL query string kullanıyoruz
+        const response = await fetch(`/user/watchlist/add?userName=${uName}&movieName=${mName}`, {
+            method: "POST"
+        });
+        const text = await response.text();
+        document.getElementById("watchlistResult").innerText = text;
+    });
+</script>
+
 </body>
 </html>

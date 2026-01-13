@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="main.selenium.MovieSearchSeleniumTest" time="5.462" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="main.selenium.MovieSearchSeleniumTest" time="5.473" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="webdriver.chrome.driver" value="C:\Users\lenovo\.cache\selenium\chromedriver\win64\143.0.7499.192\chromedriver.exe"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="TR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\lenovo\AppData\Local\Temp\surefire9704974787917757265\surefirebooter-20260112180545076_3.jar C:\Users\lenovo\AppData\Local\Temp\surefire9704974787917757265 2026-01-12T18-05-44_840-jvmRun1 surefire-20260112180545076_1tmp surefire_0-20260112180545076_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\lenovo\AppData\Local\Temp\surefire2817374310767831802\surefirebooter-20260113110316519_3.jar C:\Users\lenovo\AppData\Local\Temp\surefire2817374310767831802 2026-01-13T11-03-16_195-jvmRun1 surefire-20260113110316519_1tmp surefire_0-20260113110316519_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\lenovo\IdeaProjects\WestCast\target\test-classes;C:\Users\lenovo\IdeaProjects\WestCast\target\classes;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.7.17\spring-boot-starter-web-2.7.17.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-starter\2.7.17\spring-boot-starter-2.7.17.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot\2.7.17\spring-boot-2.7.17.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.7.17\spring-boot-autoconfigure-2.7.17.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.7.17\spring-boot-starter-logging-2.7.17.jar;C:\Users\lenovo\.m2\repository\ch\qos\logback\logback-classic\1.2.12\logback-classic-1.2.12.jar;C:\Users\lenovo\.m2\repository\ch\qos\logback\logback-core\1.2.12\logback-core-1.2.12.jar;C:\Users\lenovo\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.17.2\log4j-to-slf4j-2.17.2.jar;C:\Users\lenovo\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar;C:\Users\lenovo\.m2\repository\org\slf4j\jul-to-slf4j\1.7.36\jul-to-slf4j-1.7.36.jar;C:\Users\lenovo\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\lenovo\.m2\repository\org\yaml\snakeyaml\1.30\snakeyaml-1.30.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.7.17\spring-boot-starter-json-2.7.17.jar;C:\Users\lenovo\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.13.5\jackson-datatype-jdk8-2.13.5.jar;C:\Users\lenovo\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.13.5\jackson-datatype-jsr310-2.13.5.jar;C:\Users\lenovo\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.13.5\jackson-module-parameter-names-2.13.5.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.7.17\spring-boot-starter-tomcat-2.7.17.jar;C:\Users\lenovo\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.82\tomcat-embed-core-9.0.82.jar;C:\Users\lenovo\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.82\tomcat-embed-el-9.0.82.jar;C:\Users\lenovo\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.82\tomcat-embed-websocket-9.0.82.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-web\5.3.30\spring-web-5.3.30.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-beans\5.3.30\spring-beans-5.3.30.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-webmvc\5.3.30\spring-webmvc-5.3.30.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-context\5.3.30\spring-context-5.3.30.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-expression\5.3.30\spring-expression-5.3.30.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.7.17\spring-boot-starter-data-jpa-2.7.17.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.7.17\spring-boot-starter-aop-2.7.17.jar;C:\Users\lenovo\.m2\repository\org\aspectj\aspectjweaver\1.9.7\aspectjweaver-1.9.7.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.7.17\spring-boot-starter-jdbc-2.7.17.jar;C:\Users\lenovo\.m2\repository\com\zaxxer\HikariCP\4.0.3\HikariCP-4.0.3.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-jdbc\5.3.30\spring-jdbc-5.3.30.jar;C:\Users\lenovo\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\lenovo\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\lenovo\.m2\repository\org\hibernate\hibernate-core\5.6.15.Final\hibernate-core-5.6.15.Final.jar;C:\Users\lenovo\.m2\repository\org\jboss\logging\jboss-logging\3.4.3.Final\jboss-logging-3.4.3.Final.jar;C:\Users\lenovo\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\lenovo\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar;C:\Users\lenovo\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\lenovo\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\lenovo\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.8\jaxb-runtime-2.3.8.jar;C:\Users\lenovo\.m2\repository\org\glassfish\jaxb\txw2\2.3.8\txw2-2.3.8.jar;C:\Users\lenovo\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.12\istack-commons-runtime-3.0.12.jar;C:\Users\lenovo\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\lenovo\.m2\repository\org\springframework\data\spring-data-jpa\2.7.17\spring-data-jpa-2.7.17.jar;C:\Users\lenovo\.m2\repository\org\springframework\data\spring-data-commons\2.7.17\spring-data-commons-2.7.17.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-orm\5.3.30\spring-orm-5.3.30.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-tx\5.3.30\spring-tx-5.3.30.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-aspects\5.3.30\spring-aspects-5.3.30.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-starter-security\2.7.17\spring-boot-starter-security-2.7.17.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-aop\5.3.30\spring-aop-5.3.30.jar;C:\Users\lenovo\.m2\repository\org\springframework\security\spring-security-config\5.7.11\spring-security-config-5.7.11.jar;C:\Users\lenovo\.m2\repository\org\springframework\security\spring-security-core\5.7.11\spring-security-core-5.7.11.jar;C:\Users\lenovo\.m2\repository\org\springframework\security\spring-security-crypto\5.7.11\spring-security-crypto-5.7.11.jar;C:\Users\lenovo\.m2\repository\org\springframework\security\spring-security-web\5.7.11\spring-security-web-5.7.11.jar;C:\Users\lenovo\.m2\repository\com\h2database\h2\2.1.214\h2-2.1.214.jar;C:\Users\lenovo\.m2\repository\io\jsonwebtoken\jjwt-api\0.11.5\jjwt-api-0.11.5.jar;C:\Users\lenovo\.m2\repository\io\jsonwebtoken\jjwt-impl\0.11.5\jjwt-impl-0.11.5.jar;C:\Users\lenovo\.m2\repository\io\jsonwebtoken\jjwt-jackson\0.11.5\jjwt-jackson-0.11.5.jar;C:\Users\lenovo\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.5\jackson-databind-2.13.5.jar;C:\Users\lenovo\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.5\jackson-annotations-2.13.5.jar;C:\Users\lenovo\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.5\jackson-core-2.13.5.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-starter-test\2.7.17\spring-boot-starter-test-2.7.17.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-test\2.7.17\spring-boot-test-2.7.17.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.7.17\spring-boot-test-autoconfigure-2.7.17.jar;C:\Users\lenovo\.m2\repository\com\jayway\jsonpath\json-path\2.7.0\json-path-2.7.0.jar;C:\Users\lenovo\.m2\repository\net\minidev\json-smart\2.4.11\json-smart-2.4.11.jar;C:\Users\lenovo\.m2\repository\net\minidev\accessors-smart\2.4.11\accessors-smart-2.4.11.jar;C:\Users\lenovo\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\lenovo\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\lenovo\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\lenovo\.m2\repository\org\assertj\assertj-core\3.22.0\assertj-core-3.22.0.jar;C:\Users\lenovo\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\lenovo\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.2\junit-jupiter-5.8.2.jar;C:\Users\lenovo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\lenovo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\lenovo\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\lenovo\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\lenovo\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\lenovo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\lenovo\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;C:\Users\lenovo\.m2\repository\org\mockito\mockito-junit-jupiter\4.5.1\mockito-junit-jupiter-4.5.1.jar;C:\Users\lenovo\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\lenovo\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-core\5.3.30\spring-core-5.3.30.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-jcl\5.3.30\spring-jcl-5.3.30.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-test\5.3.30\spring-test-5.3.30.jar;C:\Users\lenovo\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\lenovo\.m2\repository\org\mockito\mockito-core\4.5.1\mockito-core-4.5.1.jar;C:\Users\lenovo\.m2\repository\net\bytebuddy\byte-buddy\1.12.23\byte-buddy-1.12.23.jar;C:\Users\lenovo\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.23\byte-buddy-agent-1.12.23.jar;C:\Users\lenovo\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-java\4.19.0\selenium-java-4.19.0.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-api\4.1.4\selenium-api-4.1.4.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.1.4\selenium-chrome-driver-4.1.4.jar;C:\Users\lenovo\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\lenovo\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\lenovo\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\lenovo\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\lenovo\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\lenovo\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\lenovo\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\lenovo\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\lenovo\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\lenovo\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.1.4\selenium-chromium-driver-4.1.4.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-json\4.1.4\selenium-json-4.1.4.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v121\4.19.0\selenium-devtools-v121-4.19.0.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.19.0\selenium-devtools-v122-4.19.0.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v123\4.19.0\selenium-devtools-v123-4.19.0.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.1.4\selenium-devtools-v85-4.1.4.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.1.4\selenium-edge-driver-4.1.4.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.1.4\selenium-firefox-driver-4.1.4.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.1.4\selenium-ie-driver-4.1.4.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.1.4\selenium-remote-driver-4.1.4.jar;C:\Users\lenovo\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-buffer\4.1.100.Final\netty-buffer-4.1.100.Final.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-codec-http\4.1.100.Final\netty-codec-http-4.1.100.Final.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-codec\4.1.100.Final\netty-codec-4.1.100.Final.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-handler\4.1.100.Final\netty-handler-4.1.100.Final.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-common\4.1.100.Final\netty-common-4.1.100.Final.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.100.Final\netty-transport-classes-epoll-4.1.100.Final.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-transport-classes-kqueue\4.1.100.Final\netty-transport-classes-kqueue-4.1.100.Final.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-transport-native-epoll\4.1.100.Final\netty-transport-native-epoll-4.1.100.Final.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.100.Final\netty-transport-native-kqueue-4.1.100.Final.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.100.Final\netty-transport-native-unix-common-4.1.100.Final.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-transport\4.1.100.Final\netty-transport-4.1.100.Final.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-resolver\4.1.100.Final\netty-resolver-4.1.100.Final.jar;C:\Users\lenovo\.m2\repository\io\opentelemetry\opentelemetry-api\1.13.0\opentelemetry-api-1.13.0.jar;C:\Users\lenovo\.m2\repository\io\opentelemetry\opentelemetry-context\1.13.0\opentelemetry-context-1.13.0.jar;C:\Users\lenovo\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.13.0\opentelemetry-exporter-logging-1.13.0.jar;C:\Users\lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.13.0-alpha\opentelemetry-sdk-metrics-1.13.0-alpha.jar;C:\Users\lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.13.0-alpha\opentelemetry-sdk-logs-1.13.0-alpha.jar;C:\Users\lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.13.0\opentelemetry-sdk-common-1.13.0.jar;C:\Users\lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.13.0\opentelemetry-sdk-extension-autoconfigure-spi-1.13.0.jar;C:\Users\lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.13.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.13.0-alpha.jar;C:\Users\lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.13.0\opentelemetry-sdk-trace-1.13.0.jar;C:\Users\lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.13.0\opentelemetry-sdk-1.13.0.jar;C:\Users\lenovo\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.13.0-alpha\opentelemetry-semconv-1.13.0-alpha.jar;C:\Users\lenovo\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\lenovo\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\lenovo\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\lenovo\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-codec-socks\4.1.100.Final\netty-codec-socks-4.1.100.Final.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-handler-proxy\4.1.100.Final\netty-handler-proxy-4.1.100.Final.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-transport-native-epoll\4.1.100.Final\netty-transport-native-epoll-4.1.100.Final-linux-x86_64.jar;C:\Users\lenovo\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.100.Final\netty-transport-native-kqueue-4.1.100.Final-osx-x86_64.jar;C:\Users\lenovo\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\lenovo\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-http\4.1.4\selenium-http-4.1.4.jar;C:\Users\lenovo\.m2\repository\dev\failsafe\failsafe\3.2.3\failsafe-3.2.3.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.1.4\selenium-safari-driver-4.1.4.jar;C:\Users\lenovo\.m2\repository\org\seleniumhq\selenium\selenium-support\4.1.4\selenium-support-4.1.4.jar;C:\Users\lenovo\.m2\repository\io\github\bonigarcia\webdrivermanager\5.7.0\webdrivermanager-5.7.0.jar;C:\Users\lenovo\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\lenovo\.m2\repository\com\google\code\gson\gson\2.9.1\gson-2.9.1.jar;C:\Users\lenovo\.m2\repository\com\github\docker-java\docker-java\3.3.5\docker-java-3.3.5.jar;C:\Users\lenovo\.m2\repository\com\github\docker-java\docker-java-core\3.3.5\docker-java-core-3.3.5.jar;C:\Users\lenovo\.m2\repository\com\github\docker-java\docker-java-api\3.3.5\docker-java-api-3.3.5.jar;C:\Users\lenovo\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\lenovo\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\lenovo\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\lenovo\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.36\jcl-over-slf4j-1.7.36.jar;C:\Users\lenovo\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.5\docker-java-transport-httpclient5-3.3.5.jar;C:\Users\lenovo\.m2\repository\com\github\docker-java\docker-java-transport\3.3.5\docker-java-transport-3.3.5.jar;C:\Users\lenovo\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\lenovo\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\lenovo\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\lenovo\.m2\repository\org\apache\commons\commons-compress\1.26.0\commons-compress-1.26.0.jar;C:\Users\lenovo\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\lenovo\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.3\httpclient5-5.2.3.jar;C:\Users\lenovo\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.1.5\httpcore5-h2-5.1.5.jar;C:\Users\lenovo\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2.3\httpcore5-5.2.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\lenovo\AppData\Local\Temp\surefire9704974787917757265\surefirebooter-20260112180545076_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\lenovo\AppData\Local\Temp\surefire2817374310767831802\surefirebooter-20260113110316519_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
@@ -57,26 +57,26 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testSearchMovie" classname="main.selenium.MovieSearchSeleniumTest" time="1.342">
-    <system-out><![CDATA[18:06:30.400 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.7.0
-18:06:30.423 [main] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=143 in cache (valid until 18:49:45 12/01/2026 TRT)
-18:06:30.424 [main] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome143=143.0.7499.192 in cache (valid until 00:38:57 13/01/2026 TRT)
-18:06:30.424 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 143.0.7499.192 (resolved driver for Chrome 143)
-18:06:30.435 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 143.0.7499.192 found in cache
-18:06:30.436 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\lenovo\.cache\selenium\chromedriver\win64\143.0.7499.192\chromedriver.exe
-18:06:30.528 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.NettyConnectListener - Using new Channel '[id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]' for 'POST' to '/session'
-18:06:31.174 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53458 : 1
-18:06:31.174 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53485 : 1
-18:06:31.174 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:61676 : 1
-18:06:31.174 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:55116 : 1
-18:06:31.292 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
+  <testcase name="testSearchMovie" classname="main.selenium.MovieSearchSeleniumTest" time="1.314">
+    <system-out><![CDATA[11:04:02.325 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.7.0
+11:04:02.356 [main] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=143 in cache (valid until 11:54:17 13/01/2026 TRT)
+11:04:02.358 [main] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome143=143.0.7499.192 in cache (valid until 10:54:17 14/01/2026 TRT)
+11:04:02.358 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 143.0.7499.192 (resolved driver for Chrome 143)
+11:04:02.369 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 143.0.7499.192 found in cache
+11:04:02.370 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\lenovo\.cache\selenium\chromedriver\win64\143.0.7499.192\chromedriver.exe
+11:04:02.461 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.NettyConnectListener - Using new Channel '[id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]' for 'POST' to '/session'
+11:04:02.942 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:54856 : 1
+11:04:02.942 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:59471 : 1
+11:04:02.942 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:54831 : 1
+11:04:02.942 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:50201 : 1
+11:04:03.255 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
 
 Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
 POST /session HTTP/1.1
 User-Agent: selenium/4.1.4 (java windows)
-Content-Length: 681
+Content-Length: 931
 Content-Type: application/json; charset=utf-8
-host: localhost:56087
+host: localhost:50862
 accept: */*
 
 Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
@@ -85,14 +85,14 @@ Content-Length: 907
 Content-Type: application/json; charset=utf-8
 cache-control: no-cache
 
-18:06:31.292 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:56087 for channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]
-18:06:31.308 [AsyncHttpClient-1-9] DEBUG org.asynchttpclient.netty.channel.NettyConnectListener - Using new Channel '[id: 0x625c2eb9, L:/127.0.0.1:53532 - R:localhost/127.0.0.1:53525]' for 'GET' to '/json/version'
-18:06:31.320 [AsyncHttpClient-1-9] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
+11:04:03.255 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:50862 for channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]
+11:04:03.263 [AsyncHttpClient-1-9] DEBUG org.asynchttpclient.netty.channel.NettyConnectListener - Using new Channel '[id: 0x60bbb6b0, L:/127.0.0.1:54899 - R:localhost/127.0.0.1:54891]' for 'GET' to '/json/version'
+11:04:03.266 [AsyncHttpClient-1-9] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
 
 Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
 GET /json/version HTTP/1.1
 User-Agent: selenium/4.1.4 (java windows)
-host: localhost:53525
+host: localhost:54891
 accept: */*
 
 Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
@@ -101,18 +101,18 @@ Content-Security-Policy: frame-ancestors 'none'
 Content-Length: 424
 Content-Type: application/json; charset=UTF-8
 
-18:06:31.321 [AsyncHttpClient-1-9] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:53525 for channel [id: 0x625c2eb9, L:/127.0.0.1:53532 - R:localhost/127.0.0.1:53525]
-18:06:31.324 [AsyncHttpClient-1-2] DEBUG org.asynchttpclient.netty.channel.NettyConnectListener - Using new Channel '[id: 0xdf5f2474, L:/127.0.0.1:53533 - R:localhost/127.0.0.1:53525]' for 'GET' to '/devtools/browser/938dadc9-02ed-4df1-9cf1-36a78d3495ee'
-18:06:31.325 [AsyncHttpClient-1-2] DEBUG org.asynchttpclient.netty.handler.WebSocketHandler - 
+11:04:03.266 [AsyncHttpClient-1-9] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:54891 for channel [id: 0x60bbb6b0, L:/127.0.0.1:54899 - R:localhost/127.0.0.1:54891]
+11:04:03.268 [AsyncHttpClient-1-2] DEBUG org.asynchttpclient.netty.channel.NettyConnectListener - Using new Channel '[id: 0x1665d657, L:/127.0.0.1:54900 - R:localhost/127.0.0.1:54891]' for 'GET' to '/devtools/browser/8f86ea9e-f2e7-4423-b96e-1161cfe54442'
+11:04:03.268 [AsyncHttpClient-1-2] DEBUG org.asynchttpclient.netty.handler.WebSocketHandler - 
 
 Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-GET /devtools/browser/938dadc9-02ed-4df1-9cf1-36a78d3495ee HTTP/1.1
+GET /devtools/browser/8f86ea9e-f2e7-4423-b96e-1161cfe54442 HTTP/1.1
 upgrade: websocket
 connection: upgrade
-sec-websocket-key: Nq7F9woT1VYu1jAX4YARWg==
+sec-websocket-key: TAjwfSLJRpmzRry5ztqFCQ==
 sec-websocket-version: 13
-origin: http://localhost:53525
-host: localhost:53525
+origin: http://localhost:54891
+host: localhost:54891
 accept: */*
 user-agent: AHC/2.1
 
@@ -120,29 +120,30 @@ Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
 HTTP/1.1 101 WebSocket Protocol Handshake
 Upgrade: WebSocket
 Connection: Upgrade
-Sec-WebSocket-Accept: ErW0aFk4L7dXwDdZf7n1e+fr9mY=
+Sec-WebSocket-Accept: DyBfwniYl8e46+8ufWxsVNnPTjI=
 
-18:06:32.275 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53525 : 1
-18:06:32.275 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53458 : 1
-18:06:32.275 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:56087 : 1
-18:06:32.275 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53485 : 1
-18:06:32.275 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:61676 : 1
-18:06:32.275 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:55116 : 1
-18:06:33.340 [Forwarding get on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]' for 'POST' to 'http://localhost:56087/session/27f9be3ba6aa451ba437c1ebfb61cdf4/url'
-18:06:33.340 [Forwarding get on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087] for POST '/session/27f9be3ba6aa451ba437c1ebfb61cdf4/url'
-18:06:33.375 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53525 : 1
-18:06:33.376 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53458 : 1
-18:06:33.377 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53485 : 1
-18:06:33.386 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:61676 : 1
-18:06:33.386 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:55116 : 1
-18:06:33.422 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
+11:04:04.006 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:50862 : 1
+11:04:04.006 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:54856 : 1
+11:04:04.006 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:59471 : 1
+11:04:04.006 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:54891 : 1
+11:04:04.006 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:54831 : 1
+11:04:04.006 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:50201 : 1
+11:04:05.105 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:50862 : 1
+11:04:05.105 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:54856 : 1
+11:04:05.105 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:59471 : 1
+11:04:05.105 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:54891 : 1
+11:04:05.105 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:54831 : 1
+11:04:05.105 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:50201 : 1
+11:04:05.278 [Forwarding get on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]' for 'POST' to 'http://localhost:50862/session/8c863d1ce8f46cf0d1de1a8be408d46f/url'
+11:04:05.278 [Forwarding get on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862] for POST '/session/8c863d1ce8f46cf0d1de1a8be408d46f/url'
+11:04:05.380 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
 
 Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/27f9be3ba6aa451ba437c1ebfb61cdf4/url HTTP/1.1
+POST /session/8c863d1ce8f46cf0d1de1a8be408d46f/url HTTP/1.1
 User-Agent: selenium/4.1.4 (java windows)
 Content-Length: 63
 Content-Type: application/json; charset=utf-8
-host: localhost:56087
+host: localhost:50862
 accept: */*
 
 Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
@@ -151,17 +152,17 @@ Content-Length: 14
 Content-Type: application/json; charset=utf-8
 cache-control: no-cache
 
-18:06:33.422 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:56087 for channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]
-18:06:33.425 [Forwarding findElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]' for 'POST' to 'http://localhost:56087/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element'
-18:06:33.425 [Forwarding findElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087] for POST '/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element'
-18:06:33.450 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
+11:04:05.380 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:50862 for channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]
+11:04:05.389 [Forwarding findElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]' for 'POST' to 'http://localhost:50862/session/8c863d1ce8f46cf0d1de1a8be408d46f/element'
+11:04:05.389 [Forwarding findElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862] for POST '/session/8c863d1ce8f46cf0d1de1a8be408d46f/element'
+11:04:05.414 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
 
 Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/27f9be3ba6aa451ba437c1ebfb61cdf4/element HTTP/1.1
+POST /session/8c863d1ce8f46cf0d1de1a8be408d46f/element HTTP/1.1
 User-Agent: selenium/4.1.4 (java windows)
 Content-Length: 56
 Content-Type: application/json; charset=utf-8
-host: localhost:56087
+host: localhost:50862
 accept: */*
 
 Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
@@ -170,17 +171,17 @@ Content-Length: 125
 Content-Type: application/json; charset=utf-8
 cache-control: no-cache
 
-18:06:33.451 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:56087 for channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]
-18:06:33.454 [Forwarding sendKeysToElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]' for 'POST' to 'http://localhost:56087/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element/f.6B7DC598DFD9FBFF3D715B76576F6A3C.d.A6517DA788C292525BEA1ACE6CF33EC3.e.1/value'
-18:06:33.454 [Forwarding sendKeysToElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087] for POST '/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element/f.6B7DC598DFD9FBFF3D715B76576F6A3C.d.A6517DA788C292525BEA1ACE6CF33EC3.e.1/value'
-18:06:33.552 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
+11:04:05.414 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:50862 for channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]
+11:04:05.417 [Forwarding sendKeysToElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]' for 'POST' to 'http://localhost:50862/session/8c863d1ce8f46cf0d1de1a8be408d46f/element/f.C43D38EA0C498E8DBCC17290CB92FBD5.d.9B4F8E2F768741928E5BD649BE165C30.e.1/value'
+11:04:05.418 [Forwarding sendKeysToElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862] for POST '/session/8c863d1ce8f46cf0d1de1a8be408d46f/element/f.C43D38EA0C498E8DBCC17290CB92FBD5.d.9B4F8E2F768741928E5BD649BE165C30.e.1/value'
+11:04:05.506 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
 
 Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/27f9be3ba6aa451ba437c1ebfb61cdf4/element/f.6B7DC598DFD9FBFF3D715B76576F6A3C.d.A6517DA788C292525BEA1ACE6CF33EC3.e.1/value HTTP/1.1
+POST /session/8c863d1ce8f46cf0d1de1a8be408d46f/element/f.C43D38EA0C498E8DBCC17290CB92FBD5.d.9B4F8E2F768741928E5BD649BE165C30.e.1/value HTTP/1.1
 User-Agent: selenium/4.1.4 (java windows)
 Content-Length: 178
 Content-Type: application/json; charset=utf-8
-host: localhost:56087
+host: localhost:50862
 accept: */*
 
 Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
@@ -189,17 +190,17 @@ Content-Length: 14
 Content-Type: application/json; charset=utf-8
 cache-control: no-cache
 
-18:06:33.552 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:56087 for channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]
-18:06:33.555 [Forwarding findElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]' for 'POST' to 'http://localhost:56087/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element'
-18:06:33.555 [Forwarding findElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087] for POST '/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element'
-18:06:33.574 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
+11:04:05.507 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:50862 for channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]
+11:04:05.508 [Forwarding findElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]' for 'POST' to 'http://localhost:50862/session/8c863d1ce8f46cf0d1de1a8be408d46f/element'
+11:04:05.508 [Forwarding findElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862] for POST '/session/8c863d1ce8f46cf0d1de1a8be408d46f/element'
+11:04:05.519 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
 
 Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/27f9be3ba6aa451ba437c1ebfb61cdf4/element HTTP/1.1
+POST /session/8c863d1ce8f46cf0d1de1a8be408d46f/element HTTP/1.1
 User-Agent: selenium/4.1.4 (java windows)
 Content-Length: 54
 Content-Type: application/json; charset=utf-8
-host: localhost:56087
+host: localhost:50862
 accept: */*
 
 Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
@@ -208,17 +209,17 @@ Content-Length: 125
 Content-Type: application/json; charset=utf-8
 cache-control: no-cache
 
-18:06:33.574 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:56087 for channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]
-18:06:33.577 [Forwarding clickElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]' for 'POST' to 'http://localhost:56087/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element/f.6B7DC598DFD9FBFF3D715B76576F6A3C.d.A6517DA788C292525BEA1ACE6CF33EC3.e.5/click'
-18:06:33.577 [Forwarding clickElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087] for POST '/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element/f.6B7DC598DFD9FBFF3D715B76576F6A3C.d.A6517DA788C292525BEA1ACE6CF33EC3.e.5/click'
-18:06:33.667 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
+11:04:05.519 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:50862 for channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]
+11:04:05.520 [Forwarding clickElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]' for 'POST' to 'http://localhost:50862/session/8c863d1ce8f46cf0d1de1a8be408d46f/element/f.C43D38EA0C498E8DBCC17290CB92FBD5.d.9B4F8E2F768741928E5BD649BE165C30.e.8/click'
+11:04:05.521 [Forwarding clickElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862] for POST '/session/8c863d1ce8f46cf0d1de1a8be408d46f/element/f.C43D38EA0C498E8DBCC17290CB92FBD5.d.9B4F8E2F768741928E5BD649BE165C30.e.8/click'
+11:04:05.577 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
 
 Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/27f9be3ba6aa451ba437c1ebfb61cdf4/element/f.6B7DC598DFD9FBFF3D715B76576F6A3C.d.A6517DA788C292525BEA1ACE6CF33EC3.e.5/click HTTP/1.1
+POST /session/8c863d1ce8f46cf0d1de1a8be408d46f/element/f.C43D38EA0C498E8DBCC17290CB92FBD5.d.9B4F8E2F768741928E5BD649BE165C30.e.8/click HTTP/1.1
 User-Agent: selenium/4.1.4 (java windows)
 Content-Length: 87
 Content-Type: application/json; charset=utf-8
-host: localhost:56087
+host: localhost:50862
 accept: */*
 
 Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
@@ -227,58 +228,58 @@ Content-Length: 14
 Content-Type: application/json; charset=utf-8
 cache-control: no-cache
 
-18:06:33.667 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:56087 for channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]
-18:06:34.474 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53525 : 1
-18:06:34.474 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53458 : 1
-18:06:34.474 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:56087 : 1
-18:06:34.474 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53485 : 1
-18:06:34.474 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:61676 : 1
-18:06:34.474 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:55116 : 1
-18:06:34.670 [Forwarding getPageSource on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]' for 'POST' to 'http://localhost:56087/session/27f9be3ba6aa451ba437c1ebfb61cdf4/execute/sync'
-18:06:34.670 [Forwarding getPageSource on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087] for POST '/session/27f9be3ba6aa451ba437c1ebfb61cdf4/execute/sync'
-18:06:34.677 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
+11:04:05.577 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:50862 for channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]
+11:04:06.206 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:50862 : 1
+11:04:06.206 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:54856 : 1
+11:04:06.206 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:59471 : 1
+11:04:06.206 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:54891 : 1
+11:04:06.206 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:54831 : 1
+11:04:06.206 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:50201 : 1
+11:04:06.581 [Forwarding getPageSource on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]' for 'POST' to 'http://localhost:50862/session/8c863d1ce8f46cf0d1de1a8be408d46f/execute/sync'
+11:04:06.581 [Forwarding getPageSource on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862] for POST '/session/8c863d1ce8f46cf0d1de1a8be408d46f/execute/sync'
+11:04:06.588 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
 
 Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/27f9be3ba6aa451ba437c1ebfb61cdf4/execute/sync HTTP/1.1
+POST /session/8c863d1ce8f46cf0d1de1a8be408d46f/execute/sync HTTP/1.1
 User-Agent: selenium/4.1.4 (java windows)
 Content-Length: 176
 Content-Type: application/json; charset=utf-8
-host: localhost:56087
+host: localhost:50862
 accept: */*
 
 Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
 HTTP/1.1 200 OK
-Content-Length: 873
+Content-Length: 1831
 Content-Type: application/json; charset=utf-8
 cache-control: no-cache
 
-18:06:34.677 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:56087 for channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]
+11:04:06.588 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:50862 for channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 143.0.7499.192 (be2c1f4fd451578a9ada68a0ac12d659362b44bf-refs/branch-heads/7499@{#4083}) on port 56087
+    <system-err><![CDATA[Starting ChromeDriver 143.0.7499.192 (be2c1f4fd451578a9ada68a0ac12d659362b44bf-refs/branch-heads/7499@{#4083}) on port 50862
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully on port 56087.
-Oca 12, 2026 6:06:31 ÖS org.openqa.selenium.remote.ProtocolHandshake createSession
+ChromeDriver was started successfully on port 50862.
+Oca 13, 2026 11:04:03 ÖÖ org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-Oca 12, 2026 6:06:31 ÖS org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Oca 13, 2026 11:04:03 ÖÖ org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 143, so returning the closest version found: a no-op implementation
-Oca 12, 2026 6:06:31 ÖS org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Oca 13, 2026 11:04:03 ÖÖ org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Unable to find CDP implementation matching 143.
-Oca 12, 2026 6:06:31 ÖS org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+Oca 13, 2026 11:04:03 ÖÖ org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
 WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.4` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="testSearchMovieNotFound" classname="main.selenium.MovieSearchSeleniumTest" time="1.179">
-    <system-out><![CDATA[18:06:34.683 [Forwarding get on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]' for 'POST' to 'http://localhost:56087/session/27f9be3ba6aa451ba437c1ebfb61cdf4/url'
-18:06:34.683 [Forwarding get on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087] for POST '/session/27f9be3ba6aa451ba437c1ebfb61cdf4/url'
-18:06:34.721 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
+  <testcase name="testSearchMovieNotFound" classname="main.selenium.MovieSearchSeleniumTest" time="1.203">
+    <system-out><![CDATA[11:04:06.594 [Forwarding get on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]' for 'POST' to 'http://localhost:50862/session/8c863d1ce8f46cf0d1de1a8be408d46f/url'
+11:04:06.594 [Forwarding get on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862] for POST '/session/8c863d1ce8f46cf0d1de1a8be408d46f/url'
+11:04:06.625 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
 
 Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/27f9be3ba6aa451ba437c1ebfb61cdf4/url HTTP/1.1
+POST /session/8c863d1ce8f46cf0d1de1a8be408d46f/url HTTP/1.1
 User-Agent: selenium/4.1.4 (java windows)
 Content-Length: 63
 Content-Type: application/json; charset=utf-8
-host: localhost:56087
+host: localhost:50862
 accept: */*
 
 Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
@@ -287,55 +288,17 @@ Content-Length: 14
 Content-Type: application/json; charset=utf-8
 cache-control: no-cache
 
-18:06:34.721 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:56087 for channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]
-18:06:34.725 [Forwarding findElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]' for 'POST' to 'http://localhost:56087/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element'
-18:06:34.725 [Forwarding findElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087] for POST '/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element'
-18:06:34.737 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
+11:04:06.625 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:50862 for channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]
+11:04:06.627 [Forwarding findElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]' for 'POST' to 'http://localhost:50862/session/8c863d1ce8f46cf0d1de1a8be408d46f/element'
+11:04:06.627 [Forwarding findElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862] for POST '/session/8c863d1ce8f46cf0d1de1a8be408d46f/element'
+11:04:06.641 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
 
 Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/27f9be3ba6aa451ba437c1ebfb61cdf4/element HTTP/1.1
+POST /session/8c863d1ce8f46cf0d1de1a8be408d46f/element HTTP/1.1
 User-Agent: selenium/4.1.4 (java windows)
 Content-Length: 56
 Content-Type: application/json; charset=utf-8
-host: localhost:56087
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 125
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-18:06:34.737 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:56087 for channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]
-18:06:34.739 [Forwarding sendKeysToElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]' for 'POST' to 'http://localhost:56087/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element/f.6B7DC598DFD9FBFF3D715B76576F6A3C.d.CE469A71BA64FFFADEBAC7AFCE28690F.e.6/value'
-18:06:34.740 [Forwarding sendKeysToElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087] for POST '/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element/f.6B7DC598DFD9FBFF3D715B76576F6A3C.d.CE469A71BA64FFFADEBAC7AFCE28690F.e.6/value'
-18:06:34.792 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/27f9be3ba6aa451ba437c1ebfb61cdf4/element/f.6B7DC598DFD9FBFF3D715B76576F6A3C.d.CE469A71BA64FFFADEBAC7AFCE28690F.e.6/value HTTP/1.1
-User-Agent: selenium/4.1.4 (java windows)
-Content-Length: 258
-Content-Type: application/json; charset=utf-8
-host: localhost:56087
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 14
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-18:06:34.793 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:56087 for channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]
-18:06:34.794 [Forwarding findElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]' for 'POST' to 'http://localhost:56087/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element'
-18:06:34.794 [Forwarding findElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087] for POST '/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element'
-18:06:34.803 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/27f9be3ba6aa451ba437c1ebfb61cdf4/element HTTP/1.1
-User-Agent: selenium/4.1.4 (java windows)
-Content-Length: 54
-Content-Type: application/json; charset=utf-8
-host: localhost:56087
+host: localhost:50862
 accept: */*
 
 Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
@@ -344,17 +307,17 @@ Content-Length: 126
 Content-Type: application/json; charset=utf-8
 cache-control: no-cache
 
-18:06:34.803 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:56087 for channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]
-18:06:34.804 [Forwarding clickElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]' for 'POST' to 'http://localhost:56087/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element/f.6B7DC598DFD9FBFF3D715B76576F6A3C.d.CE469A71BA64FFFADEBAC7AFCE28690F.e.11/click'
-18:06:34.804 [Forwarding clickElement on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087] for POST '/session/27f9be3ba6aa451ba437c1ebfb61cdf4/element/f.6B7DC598DFD9FBFF3D715B76576F6A3C.d.CE469A71BA64FFFADEBAC7AFCE28690F.e.11/click'
-18:06:34.849 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
+11:04:06.642 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:50862 for channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]
+11:04:06.643 [Forwarding sendKeysToElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]' for 'POST' to 'http://localhost:50862/session/8c863d1ce8f46cf0d1de1a8be408d46f/element/f.C43D38EA0C498E8DBCC17290CB92FBD5.d.2C861C8A0C115A52A6108F44A3A5E532.e.13/value'
+11:04:06.644 [Forwarding sendKeysToElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862] for POST '/session/8c863d1ce8f46cf0d1de1a8be408d46f/element/f.C43D38EA0C498E8DBCC17290CB92FBD5.d.2C861C8A0C115A52A6108F44A3A5E532.e.13/value'
+11:04:06.710 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
 
 Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/27f9be3ba6aa451ba437c1ebfb61cdf4/element/f.6B7DC598DFD9FBFF3D715B76576F6A3C.d.CE469A71BA64FFFADEBAC7AFCE28690F.e.11/click HTTP/1.1
+POST /session/8c863d1ce8f46cf0d1de1a8be408d46f/element/f.C43D38EA0C498E8DBCC17290CB92FBD5.d.2C861C8A0C115A52A6108F44A3A5E532.e.13/value HTTP/1.1
 User-Agent: selenium/4.1.4 (java windows)
-Content-Length: 88
+Content-Length: 259
 Content-Type: application/json; charset=utf-8
-host: localhost:56087
+host: localhost:50862
 accept: */*
 
 Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
@@ -363,32 +326,70 @@ Content-Length: 14
 Content-Type: application/json; charset=utf-8
 cache-control: no-cache
 
-18:06:34.849 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:56087 for channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]
-18:06:35.574 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53525 : 1
-18:06:35.574 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53458 : 1
-18:06:35.574 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:56087 : 1
-18:06:35.574 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53485 : 1
-18:06:35.574 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:61676 : 1
-18:06:35.574 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:55116 : 1
-18:06:35.852 [Forwarding getPageSource on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]' for 'POST' to 'http://localhost:56087/session/27f9be3ba6aa451ba437c1ebfb61cdf4/execute/sync'
-18:06:35.852 [Forwarding getPageSource on session 27f9be3ba6aa451ba437c1ebfb61cdf4 to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087] for POST '/session/27f9be3ba6aa451ba437c1ebfb61cdf4/execute/sync'
-18:06:35.858 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
+11:04:06.710 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:50862 for channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]
+11:04:06.716 [Forwarding findElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]' for 'POST' to 'http://localhost:50862/session/8c863d1ce8f46cf0d1de1a8be408d46f/element'
+11:04:06.716 [Forwarding findElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862] for POST '/session/8c863d1ce8f46cf0d1de1a8be408d46f/element'
+11:04:06.724 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
 
 Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/27f9be3ba6aa451ba437c1ebfb61cdf4/execute/sync HTTP/1.1
+POST /session/8c863d1ce8f46cf0d1de1a8be408d46f/element HTTP/1.1
 User-Agent: selenium/4.1.4 (java windows)
-Content-Length: 176
+Content-Length: 54
 Content-Type: application/json; charset=utf-8
-host: localhost:56087
+host: localhost:50862
 accept: */*
 
 Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
 HTTP/1.1 200 OK
-Content-Length: 850
+Content-Length: 126
 Content-Type: application/json; charset=utf-8
 cache-control: no-cache
 
-18:06:35.858 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:56087 for channel [id: 0x285da9c3, L:/127.0.0.1:53524 - R:localhost/127.0.0.1:56087]
+11:04:06.724 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:50862 for channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]
+11:04:06.726 [Forwarding clickElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]' for 'POST' to 'http://localhost:50862/session/8c863d1ce8f46cf0d1de1a8be408d46f/element/f.C43D38EA0C498E8DBCC17290CB92FBD5.d.2C861C8A0C115A52A6108F44A3A5E532.e.20/click'
+11:04:06.726 [Forwarding clickElement on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862] for POST '/session/8c863d1ce8f46cf0d1de1a8be408d46f/element/f.C43D38EA0C498E8DBCC17290CB92FBD5.d.2C861C8A0C115A52A6108F44A3A5E532.e.20/click'
+11:04:06.783 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/8c863d1ce8f46cf0d1de1a8be408d46f/element/f.C43D38EA0C498E8DBCC17290CB92FBD5.d.2C861C8A0C115A52A6108F44A3A5E532.e.20/click HTTP/1.1
+User-Agent: selenium/4.1.4 (java windows)
+Content-Length: 88
+Content-Type: application/json; charset=utf-8
+host: localhost:50862
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Length: 14
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+
+11:04:06.784 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:50862 for channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]
+11:04:07.305 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:50862 : 1
+11:04:07.305 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:54856 : 1
+11:04:07.305 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:59471 : 1
+11:04:07.305 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:54891 : 1
+11:04:07.305 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:54831 : 1
+11:04:07.305 [AsyncHttpClient-1-1] DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool - Entry count for : http://localhost:50201 : 1
+11:04:07.787 [Forwarding getPageSource on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]' for 'POST' to 'http://localhost:50862/session/8c863d1ce8f46cf0d1de1a8be408d46f/execute/sync'
+11:04:07.787 [Forwarding getPageSource on session 8c863d1ce8f46cf0d1de1a8be408d46f to remote] DEBUG org.asynchttpclient.netty.request.NettyRequestSender - Using open Channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862] for POST '/session/8c863d1ce8f46cf0d1de1a8be408d46f/execute/sync'
+11:04:07.793 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.handler.HttpHandler - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/8c863d1ce8f46cf0d1de1a8be408d46f/execute/sync HTTP/1.1
+User-Agent: selenium/4.1.4 (java windows)
+Content-Length: 176
+Content-Type: application/json; charset=utf-8
+host: localhost:50862
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Length: 1808
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+
+11:04:07.793 [AsyncHttpClient-1-8] DEBUG org.asynchttpclient.netty.channel.ChannelManager - Adding key: http://localhost:50862 for channel [id: 0x72d762c2, L:/127.0.0.1:54890 - R:localhost/127.0.0.1:50862]
 ]]></system-out>
   </testcase>
 </testsuite>
