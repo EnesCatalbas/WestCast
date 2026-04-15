@@ -1,0 +1,77 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'Maven'
+        jdk 'JDK17'
+    }
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/EnesCatalbas/WestCast.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn clean package -DskipTests'
+            }
+        }
+
+        stage('Unit Tests') {
+            steps {
+                sh 'mvn test -Dtest=**/*Test'
+            }
+        }
+
+        stage('Integration Tests') {
+            steps {
+                sh 'mvn test -Dtest=**/*IT'
+            }
+        }
+
+        stage('Docker Build & Run') {
+            steps {
+                sh '''
+                docker build -t westcast-app .
+                docker rm -f westcast-container || true
+                docker run -d -p 8080:8080 --name westcast-container westcast-app
+                '''
+            }
+        }
+
+        stage('Selenium Tests - Scenario 1') {
+            steps {
+                sh 'mvn test -Dtest=main.selenium.LoginSeleniumTest'
+            }
+        }
+
+        stage('Selenium Tests - Scenario 2') {
+            steps {
+                sh 'mvn test -Dtest=main.selenium.SignupSeleniumTest'
+            }
+        }
+
+        stage('Selenium Tests - Scenario 3') {
+            steps {
+                sh 'mvn test -Dtest=main.selenium.MovieSearchSeleniumTest'
+            }
+        }
+    }
+
+    post {
+        always {
+            junit 'target/surefire-reports/*.xml'
+        }
+
+        success {
+            echo '✅ Tüm CI/CD aşamaları başarıyla tamamlandı'
+        }
+
+        failure {
+            echo '❌ Pipeline başarısız oldu'
+        }
+    }
+}

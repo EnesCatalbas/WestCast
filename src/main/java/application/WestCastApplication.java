@@ -17,5 +17,5 @@ public class WestCastApplication {
         SpringApplication.run(WestCastApplication.class, args);
     }
 
-    // degisiklik deneme
+    // degisiklik deneme 222
 }
