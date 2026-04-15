@@ -24,9 +24,9 @@ pipeline {
 
         stage('3- Start Backend') {
             steps {
-                echo '🚀 Starting backend on port 8081...'
+                echo '🚀 Starting backend on port 8080...'
                 bat '''
-                    start "" cmd /c "mvn spring-boot:run -Dserver.port=8081 > backend.log 2>&1"
+                    start "" cmd /c "mvn spring-boot:run -Dserver.port=8080 > backend.log 2>&1"
                     powershell -Command "Start-Sleep -Seconds 30"
                 '''
             }
@@ -35,7 +35,7 @@ pipeline {
         stage('4- Run All Tests') {
             steps {
                 echo '🧪 Running all tests (unit + integration)...'
-                bat 'mvn verify -Pselenium -Dapp.url=http://localhost:8081'
+                bat 'mvn verify -Pselenium -Dapp.url=http://localhost:8080'
             }
             post {
                 always {
@@ -48,9 +48,9 @@ pipeline {
 
     post {
         always {
-            echo '🟢 Cleaning up backend process on port 8081...'
+            echo '🟢 Cleaning up backend process on port 8080...'
             bat '''
-                for /f "tokens=5" %%p in ('netstat -ano ^| find ":8081" ^| find "LISTENING"') do (
+                for /f "tokens=5" %%p in ('netstat -ano ^| find ":8080" ^| find "LISTENING"') do (
                     taskkill /PID %%p /F
                 )
                 exit 0
