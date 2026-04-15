@@ -10,57 +10,45 @@ pipeline {
 
         stage('1- Checkout') {
             steps {
-                echo ' Checking out from GitHub...'
-                git branch: 'master', credentialsId: 'github-credentials', url: 'https://github.com/EnesCatalbas/WestCast.git'
+                echo 'Cloning repo...'
+                git branch: 'master',
+                    credentialsId: 'github-credentials',
+                    url: 'https://github.com/EnesCatalbas/WestCast.git'
             }
         }
 
-        stage('2- Build Project') {
+        stage('2- Build Maven Project') {
             steps {
-                echo ' Building project (skipping tests for faster compile)...'
-                bat 'mvn clean compile -DskipTests'
+                echo 'Building project...'
+                bat 'mvn clean package -DskipTests'
             }
         }
 
-        stage('3- Start Backend') {
+        stage('3- Build Docker Image') {
             steps {
-                echo ' Starting backend on port 8081...'
+                echo 'Building Docker image...'
+                bat 'docker build -t westcast-app .'
+            }
+        }
+
+        stage('4- Run Container') {
+            steps {
+                echo 'Running Docker container...'
                 bat '''
-                    start "" cmd /c "mvn spring-boot:run -Dserver.port=8081 > backend.log 2>&1"
-                    powershell -Command "Start-Sleep -Seconds 30"
+                    docker stop westcast || exit 0
+                    docker rm westcast || exit 0
+                    docker run -d -p 8081:8081 --name westcast westcast-app
                 '''
-            }
-        }
-
-        stage('4- Run All Tests') {
-            steps {
-                echo ' Running all tests (unit + integration)...'
-                bat 'mvn verify -Pselenium -Dapp.url=http://localhost:8081'
-            }
-            post {
-                always {
-                    echo ' Publishing JUnit test results...'
-                    junit testResults: 'target/surefire-reports/*.xml, target/failsafe-reports/*.xml', allowEmptyResults: true
-                }
             }
         }
     }
 
     post {
-        always {
-            echo ' Cleaning up backend process on port 8081...'
-            bat '''
-                for /f "tokens=5" %%p in ('netstat -ano ^| find ":8081" ^| find "LISTENING"') do (
-                    taskkill /PID %%p /F
-                )
-                exit 0
-            '''
-        }
         success {
-            echo 'BUILD BASARILI!!'
+            echo 'BUILD + DOCKER RUN SUCCESS!'
         }
         failure {
-            echo 'BUILD BASARISIZ'
+            echo 'BUILD FAILED'
         }
     }
 }
