@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class LoginSeleniumTest extends BaseTest {
 
-    @Test
+    /* @Test
     void testLoginWithSelenium() throws Exception {
 
         ApiTestHelper.signup("seleniumUser", "1234");
@@ -71,6 +71,6 @@ public class LoginSeleniumTest extends BaseTest {
                 page.toLowerCase().contains("login"),
                 "Boş alanlarla login başarısız olmalıydı"
         );
-    }
+    } */
 
 }

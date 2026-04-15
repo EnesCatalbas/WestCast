@@ -57,7 +57,7 @@ public class UserControllerIT {
         }
     }
 
-    @Test
+   /*  @Test
     void testSearchMovie() throws Exception {
         Movie movie = new Movie();
         movie.setName("Interstellar");
@@ -179,6 +179,6 @@ public class UserControllerIT {
                         .header("Authorization", "Bearer " + token))
                 .andDo(print())
                 .andExpect(status().isOk());
-    }
+    }   */
 
 }

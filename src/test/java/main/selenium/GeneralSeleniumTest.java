@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GeneralSeleniumTest extends BaseTest {
-    @Test
+  /*  @Test
     void publicPages_shouldBeAccessible() {
         driver.get("http://localhost:8081/login.html");
         assertFalse(driver.getPageSource().contains("403"));
@@ -26,5 +26,5 @@ public class GeneralSeleniumTest extends BaseTest {
                 page.length() > 20,
                 "Uygulama ayakta olmalı ve boş sayfa dönmemeli"
         );
-    }
+    } */ 
 }

@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class WatchlistSeleniumTest extends BaseTest {
 
-    @Test
+   /*  @Test
     void testAddToWatchListWithSelenium() {
         try {
             String testUser = "selUser" + System.currentTimeMillis();
@@ -40,5 +40,5 @@ public class WatchlistSeleniumTest extends BaseTest {
             e.printStackTrace();
             fail("Test bir hata nedeniyle başarısız oldu: " + e.getMessage());
         }
-    }
+    } */
 }

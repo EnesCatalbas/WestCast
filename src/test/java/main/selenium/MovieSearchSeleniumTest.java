@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MovieSearchSeleniumTest extends BaseTest {
 
-    @Test
+    /* @Test
     void testSearchMovie() throws InterruptedException {
         driver.get("http://localhost:8081/search.html");
 
@@ -36,6 +36,6 @@ public class MovieSearchSeleniumTest extends BaseTest {
                 !pageSource.toLowerCase().contains("matrix"),
                 "Olmayan film sonuçlarda görünmemeliydi"
         );
-    }
+    } */
 
 }

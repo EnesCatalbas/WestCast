@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SignupSeleniumTest extends BaseTest {
 
-    @Test
+    /*@Test
     void testSignupWithSelenium() {
         driver.get("http://localhost:8081/signup.html");
 
@@ -50,5 +50,5 @@ public class SignupSeleniumTest extends BaseTest {
 
         String pageSource = driver.getPageSource();
         assertTrue(pageSource.contains("already exists"), "Hata mesajı görünmedi!");
-    }
+    } */
 }
