@@ -21,6 +21,7 @@ public class SecurityConfig {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers(
+                        "/user/hello",
                         "/user/signUp",
                         "/user/login",
                         "/login.html",
