@@ -17,7 +17,7 @@ public class UserController {
 
     @GetMapping("/hello")
         public String hello() {
-        return "API is working";
+        return "API is working testttt";
 }
 
     @PostMapping(path = "/rate", produces = "text/plain;charset=UTF-8")
