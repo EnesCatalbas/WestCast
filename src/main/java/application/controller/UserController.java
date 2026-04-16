@@ -7,13 +7,18 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(path = "/user")
 public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @GetMapping("/hello")
+        public String hello() {
+        return "API is working 🚀";
+}
 
     @PostMapping(path = "/rate", produces = "text/plain;charset=UTF-8")
     public String rateMovie(@RequestParam String movieName, @RequestParam int score) {
