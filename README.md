@@ -1,33 +1,5 @@
-WestCast - Backend & CI/CD Geliştirme
-Bu proje, Java ve Spring Boot ekosistemi kullanılarak geliştirilmiş, kurumsal yazılım geliştirme standartlarını ve modern DevOps süreçlerini (CI/CD) temel alan bir backend uygulamasıdır.  
-Not: Bu proje şu anda aktif geliştirme aşamasındadır. Şu an için sadece Backend ve API mimarisi kısmen tamamlanmış olup, Frontend geliştirme süreci devam etmektedir.
+WestCast - Backend Development ProjectThis project is a Java-based backend application developed with Spring Boot and Jakarta EE. It focuses on building a robust API architecture and implementing software validation practices.  Project Status
 
-Teknolojiler ve Araçlar
-Backend: Java, Spring Boot, Jakarta EE.  
+The project is currently in active development. The primary focus is on backend logic and database management; frontend development is planned for a later stage.  Technical StackLanguages: Java  Frameworks: Spring Boot, Jakarta EE  Persistence: JPA / Hibernate  Testing & Automation: JUnit, Selenium, Jenkins (CI/CD)  FeaturesAPI-First Design: Developed with a decoupled architecture for frontend-independent functionality.  Software Validation: Implementation of integration tests to ensure data consistency and endpoint reliability. 
 
-Veritabanı & Katmanlar: JPA / Hibernate.  
-
-DevOps: Jenkins (CI/CD Pipeline), Maven.  
-
-Test: JUnit, Selenium (Uçtan uca testler).  
-
-Öne Çıkan Özellikler
-CI/CD Entegrasyonu: Proje, Jenkins üzerinde yapılandırılmış bir boru hattına (pipeline) sahiptir. Her kod gönderiminde (push) otomatik olarak derleme, test ve raporlama süreçleri çalışmaktadır.  
-
-Yazılım Doğrulama: UserControllerIT gibi entegrasyon testleri ile API uç noktalarının güvenilirliği ve veri tutarlılığı her aşamada kontrol edilmektedir.  
-
-Katmanlı Mimari: Proje, sürdürülebilirlik ve test edilebilirlik için Controller-Service-Repository katmanlı mimarisi üzerine inşa edilmiştir.  
-
-Kurulum ve Çalıştırma
-Projeyi klonlayın:
-
-Bash
-git clone https://github.com/EnesCatalbas/WestCast.git
-
-2. Maven bağımlılıklarını yükleyin:
-   ```bash
-   mvn install
-Uygulamayı başlatın:
-
-Bash
-mvn spring-boot:run
+LicenseThis project is licensed under the MIT License.
